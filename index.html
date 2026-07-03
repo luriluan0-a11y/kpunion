@@ -1,767 +1,288 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>이윤임 포트폴리오</title>
-  <style>
-    :root {
-      --red: #c0392b;
-      --red-dark: #96281b;
-      --red-light: #e74c3c;
-      --red-pale: #fdf2f2;
-      --gray-900: #1a1a1a;
-      --gray-700: #3d3d3d;
-      --gray-400: #999;
-      --gray-100: #f5f5f5;
-      --white: #ffffff;
-    }
-
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-
-    html { scroll-behavior: smooth; }
-
-    body {
-      font-family: 'Apple SD Gothic Neo', 'Noto Sans KR', 'Malgun Gothic', sans-serif;
-      color: var(--gray-900);
-      line-height: 1.7;
-      background: var(--white);
-    }
-
-    /* ── NAV ── */
-    nav {
-      position: fixed;
-      top: 0; left: 0; right: 0;
-      z-index: 100;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 1rem 4rem;
-      background: rgba(255,255,255,0.92);
-      backdrop-filter: blur(10px);
-      border-bottom: 1px solid rgba(192,57,43,0.12);
-    }
-
-    .nav-logo {
-      font-size: 1.1rem;
-      font-weight: 700;
-      color: var(--red);
-      letter-spacing: -0.5px;
-    }
-
-    .nav-links {
-      display: flex;
-      gap: 2rem;
-      list-style: none;
-    }
-
-    .nav-links a {
-      text-decoration: none;
-      color: var(--gray-700);
-      font-size: 0.9rem;
-      font-weight: 500;
-      transition: color 0.2s;
-    }
-
-    .nav-links a:hover { color: var(--red); }
-
-    /* ── HERO ── */
-    #hero {
-      min-height: 100vh;
-      display: flex;
-      align-items: center;
-      padding: 6rem 4rem 4rem;
-      background: linear-gradient(135deg, var(--gray-900) 0%, #2c0a08 50%, var(--red-dark) 100%);
-      position: relative;
-      overflow: hidden;
-    }
-
-    #hero::before {
-      content: '';
-      position: absolute;
-      top: -200px; right: -200px;
-      width: 600px; height: 600px;
-      background: radial-gradient(circle, rgba(192,57,43,0.3) 0%, transparent 70%);
-      pointer-events: none;
-    }
-
-    #hero::after {
-      content: '';
-      position: absolute;
-      bottom: -100px; left: -100px;
-      width: 400px; height: 400px;
-      background: radial-gradient(circle, rgba(231,76,60,0.15) 0%, transparent 70%);
-      pointer-events: none;
-    }
-
-    .hero-content {
-      max-width: 900px;
-      position: relative;
-      z-index: 1;
-    }
-
-    .hero-badge {
-      display: inline-block;
-      padding: 0.35rem 1rem;
-      background: rgba(192,57,43,0.4);
-      border: 1px solid rgba(231,76,60,0.5);
-      border-radius: 100px;
-      color: #ffb3ad;
-      font-size: 0.8rem;
-      letter-spacing: 0.05em;
-      margin-bottom: 1.5rem;
-    }
-
-    .hero-name {
-      font-size: clamp(3rem, 8vw, 5.5rem);
-      font-weight: 800;
-      color: var(--white);
-      letter-spacing: -2px;
-      line-height: 1.1;
-      margin-bottom: 1rem;
-    }
-
-    .hero-name span {
-      color: var(--red-light);
-    }
-
-    .hero-title {
-      font-size: clamp(1rem, 2.5vw, 1.3rem);
-      color: rgba(255,255,255,0.7);
-      margin-bottom: 2rem;
-      font-weight: 400;
-    }
-
-    .hero-desc {
-      font-size: 1rem;
-      color: rgba(255,255,255,0.55);
-      max-width: 480px;
-      margin-bottom: 3rem;
-      line-height: 1.8;
-    }
-
-    .hero-tags {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.6rem;
-    }
-
-    .tag {
-      padding: 0.4rem 1rem;
-      border: 1px solid rgba(255,255,255,0.2);
-      border-radius: 100px;
-      color: rgba(255,255,255,0.7);
-      font-size: 0.8rem;
-    }
-
-    /* ── SECTION COMMON ── */
-    section { padding: 6rem 4rem; }
-
-    .section-label {
-      display: inline-block;
-      font-size: 0.75rem;
-      font-weight: 700;
-      letter-spacing: 0.15em;
-      text-transform: uppercase;
-      color: var(--red);
-      margin-bottom: 0.75rem;
-    }
-
-    .section-title {
-      font-size: clamp(1.8rem, 4vw, 2.8rem);
-      font-weight: 800;
-      letter-spacing: -1px;
-      color: var(--gray-900);
-      margin-bottom: 3.5rem;
-      line-height: 1.2;
-    }
-
-    .section-title span { color: var(--red); }
-
-    /* ── ABOUT ── */
-    #about { background: var(--white); }
-
-    .about-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 3rem;
-      align-items: start;
-    }
-
-    .about-card {
-      background: var(--red-pale);
-      border-left: 4px solid var(--red);
-      padding: 2rem;
-      border-radius: 0 12px 12px 0;
-    }
-
-    .about-card h3 {
-      font-size: 0.8rem;
-      text-transform: uppercase;
-      letter-spacing: 0.1em;
-      color: var(--red);
-      margin-bottom: 0.75rem;
-    }
-
-    .about-card p {
-      font-size: 1rem;
-      color: var(--gray-700);
-      font-weight: 500;
-    }
-
-    .about-quote {
-      grid-column: 1 / -1;
-      background: var(--gray-900);
-      padding: 2.5rem 3rem;
-      border-radius: 16px;
-      position: relative;
-    }
-
-    .about-quote::before {
-      content: '"';
-      position: absolute;
-      top: -0.5rem; left: 2rem;
-      font-size: 6rem;
-      color: var(--red);
-      font-family: Georgia, serif;
-      line-height: 1;
-      opacity: 0.4;
-    }
-
-    .about-quote p {
-      font-size: 1.3rem;
-      color: var(--white);
-      font-weight: 500;
-      line-height: 1.7;
-    }
-
-    .about-quote cite {
-      display: block;
-      margin-top: 1rem;
-      font-size: 0.85rem;
-      color: rgba(255,255,255,0.4);
-      font-style: normal;
-    }
-
-    /* ── EDUCATION ── */
-    #education { background: var(--gray-100); }
-
-    .edu-list {
-      display: flex;
-      flex-direction: column;
-      gap: 1.5rem;
-      max-width: 800px;
-    }
-
-    .edu-item {
-      display: grid;
-      grid-template-columns: auto 1fr;
-      gap: 1.5rem;
-      align-items: start;
-      background: var(--white);
-      padding: 1.75rem 2rem;
-      border-radius: 14px;
-      box-shadow: 0 2px 12px rgba(0,0,0,0.05);
-      transition: transform 0.2s, box-shadow 0.2s;
-    }
-
-    .edu-item:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 6px 24px rgba(192,57,43,0.1);
-    }
-
-    .edu-icon {
-      width: 48px; height: 48px;
-      background: var(--red-pale);
-      border-radius: 12px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 1.4rem;
-      flex-shrink: 0;
-    }
-
-    .edu-info h3 {
-      font-size: 1.05rem;
-      font-weight: 700;
-      color: var(--gray-900);
-      margin-bottom: 0.25rem;
-    }
-
-    .edu-info p {
-      font-size: 0.88rem;
-      color: var(--gray-400);
-    }
-
-    .edu-badge {
-      display: inline-block;
-      margin-top: 0.4rem;
-      padding: 0.2rem 0.7rem;
-      background: var(--red-pale);
-      color: var(--red);
-      border-radius: 100px;
-      font-size: 0.75rem;
-      font-weight: 600;
-    }
-
-    /* ── SKILLS ── */
-    #skills { background: var(--white); }
-
-    .skills-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 2rem;
-    }
-
-    .skill-card {
-      background: var(--white);
-      border: 1px solid #ebebeb;
-      border-radius: 16px;
-      padding: 2rem;
-      transition: border-color 0.2s, transform 0.2s;
-    }
-
-    .skill-card:hover {
-      border-color: var(--red-light);
-      transform: translateY(-3px);
-    }
-
-    .skill-card-title {
-      font-size: 0.75rem;
-      font-weight: 700;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-      color: var(--gray-400);
-      margin-bottom: 1.2rem;
-    }
-
-    .skill-chips {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.5rem;
-    }
-
-    .chip {
-      padding: 0.4rem 0.9rem;
-      background: var(--gray-100);
-      border-radius: 8px;
-      font-size: 0.85rem;
-      font-weight: 500;
-      color: var(--gray-700);
-      transition: background 0.2s, color 0.2s;
-    }
-
-    .chip:hover {
-      background: var(--red-pale);
-      color: var(--red);
-    }
-
-    .chip.highlight {
-      background: var(--red-pale);
-      color: var(--red);
-      font-weight: 600;
-    }
-
-    /* ── STRENGTHS ── */
-    #strengths { background: var(--gray-900); }
-
-    #strengths .section-title { color: var(--white); }
-    #strengths .section-label { color: #ff8a80; }
-
-    .strengths-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-      gap: 1.5rem;
-    }
-
-    .strength-card {
-      background: rgba(255,255,255,0.05);
-      border: 1px solid rgba(255,255,255,0.08);
-      border-radius: 16px;
-      padding: 2rem;
-      transition: background 0.2s, border-color 0.2s;
-    }
-
-    .strength-card:hover {
-      background: rgba(192,57,43,0.15);
-      border-color: rgba(231,76,60,0.3);
-    }
-
-    .strength-num {
-      font-size: 3rem;
-      font-weight: 900;
-      color: var(--red-light);
-      opacity: 0.3;
-      line-height: 1;
-      margin-bottom: 0.5rem;
-    }
-
-    .strength-card h3 {
-      font-size: 1.1rem;
-      font-weight: 700;
-      color: var(--white);
-      margin-bottom: 0.6rem;
-    }
-
-    .strength-card p {
-      font-size: 0.88rem;
-      color: rgba(255,255,255,0.5);
-      line-height: 1.7;
-    }
-
-    /* ── LEARNING ── */
-    #learning { background: var(--red-pale); }
-
-    .learning-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 2rem;
-    }
-
-    .learning-item {
-      background: var(--white);
-      padding: 2rem;
-      border-radius: 14px;
-      border-top: 3px solid var(--red);
-    }
-
-    .learning-item h3 {
-      font-size: 0.8rem;
-      text-transform: uppercase;
-      letter-spacing: 0.1em;
-      color: var(--red);
-      margin-bottom: 1rem;
-    }
-
-    .learning-item ul {
-      list-style: none;
-      display: flex;
-      flex-direction: column;
-      gap: 0.6rem;
-    }
-
-    .learning-item li {
-      display: flex;
-      align-items: center;
-      gap: 0.6rem;
-      font-size: 0.95rem;
-      color: var(--gray-700);
-    }
-
-    .learning-item li::before {
-      content: '';
-      width: 6px; height: 6px;
-      background: var(--red);
-      border-radius: 50%;
-      flex-shrink: 0;
-    }
-
-    /* ── FOOTER ── */
-    footer {
-      background: var(--gray-900);
-      padding: 3rem 4rem;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-
-    footer .footer-name {
-      font-size: 1.2rem;
-      font-weight: 700;
-      color: var(--white);
-    }
-
-    footer p {
-      font-size: 0.82rem;
-      color: rgba(255,255,255,0.35);
-      margin-top: 0.25rem;
-    }
-
-    .footer-dot {
-      width: 10px; height: 10px;
-      background: var(--red);
-      border-radius: 50%;
-      box-shadow: 0 0 12px rgba(231,76,60,0.6);
-    }
-
-    /* ── RESPONSIVE ── */
-    @media (max-width: 768px) {
-      nav { padding: 1rem 1.5rem; }
-      .nav-links { gap: 1.2rem; }
-      section { padding: 4rem 1.5rem; }
-      #hero { padding: 5rem 1.5rem 3rem; }
-      .about-grid { grid-template-columns: 1fr; }
-      .learning-grid { grid-template-columns: 1fr; }
-      footer { flex-direction: column; gap: 1rem; text-align: center; }
-    }
-
-    /* ── SCROLL ANIMATION ── */
-    .fade-in {
-      opacity: 0;
-      transform: translateY(20px);
-      transition: opacity 0.6s ease, transform 0.6s ease;
-    }
-
-    .fade-in.visible {
-      opacity: 1;
-      transform: translateY(0);
-    }
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>바이브 코딩 방학특강 2026 · 챗봇 만들기</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@500;600;700&family=Noto+Sans+KR:wght@400;500;700;900&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --space-1:#070a14;
+    --space-2:#0d1326;
+    --panel:#111a33;
+    --panel-line:rgba(111,216,255,0.18);
+    --jedi:#6fd8ff;
+    --jedi-soft:rgba(111,216,255,0.12);
+    --gold:#ffcf6b;
+    --sabergreen:#5cff9d;
+    --sithred:#ff5d6c;
+    --ink:#eef2fb;
+    --ink-dim:#8f9ac4;
+  }
+  *{box-sizing:border-box; margin:0; padding:0;}
+  html{scroll-behavior:smooth;}
+  body{
+    font-family:'Noto Sans KR', sans-serif;
+    background:
+      radial-gradient(1.5px 1.5px at 20% 30%, rgba(255,255,255,0.5) 50%, transparent 51%),
+      radial-gradient(1.5px 1.5px at 70% 65%, rgba(255,255,255,0.4) 50%, transparent 51%),
+      radial-gradient(1px 1px at 85% 20%, rgba(255,255,255,0.4) 50%, transparent 51%),
+      radial-gradient(1px 1px at 40% 80%, rgba(255,255,255,0.3) 50%, transparent 51%),
+      radial-gradient(1px 1px at 55% 15%, rgba(255,255,255,0.3) 50%, transparent 51%),
+      radial-gradient(1px 1px at 10% 60%, rgba(255,255,255,0.35) 50%, transparent 51%),
+      radial-gradient(ellipse 60% 40% at 50% 0%, rgba(111,216,255,0.10), transparent 60%),
+      linear-gradient(180deg, var(--space-1), var(--space-2));
+    color:var(--ink);
+    min-height:100vh;
+  }
+
+  .wrap{ max-width:880px; margin:0 auto; padding:0 22px 90px; }
+
+  /* header */
+  header{ padding:70px 0 40px; text-align:center; }
+  .eyebrow{
+    display:inline-block; font-family:'Chakra Petch', sans-serif; font-weight:600; font-size:12.5px;
+    letter-spacing:0.28em; color:var(--jedi); border:1px solid var(--panel-line); padding:6px 16px;
+    border-radius:99px; background:var(--jedi-soft); margin-bottom:22px;
+  }
+  h1{
+    font-family:'Chakra Petch', sans-serif; font-weight:700;
+    font-size:clamp(30px, 5.2vw, 46px); line-height:1.25;
+    background:linear-gradient(180deg, #fff 30%, var(--jedi) 130%);
+    -webkit-background-clip:text; background-clip:text; color:transparent;
+    margin-bottom:14px;
+  }
+  header p.sub{ color:var(--ink-dim); font-size:15px; max-width:520px; margin:0 auto; line-height:1.7; }
+
+  /* sections */
+  section{ margin-top:52px; }
+  .sec-head{ display:flex; align-items:center; gap:12px; margin-bottom:20px; }
+  .sec-num{
+    font-family:'Chakra Petch', sans-serif; font-weight:700; font-size:13px; color:var(--space-1);
+    background:var(--jedi); width:30px; height:30px; border-radius:8px;
+    display:flex; align-items:center; justify-content:center; flex-shrink:0;
+  }
+  .sec-title{ font-family:'Chakra Petch', sans-serif; font-weight:700; font-size:21px; }
+
+  .panel{
+    background:var(--panel); border:1px solid var(--panel-line); border-radius:18px;
+    padding:26px 28px; position:relative; overflow:hidden;
+  }
+  .panel::before{
+    content:""; position:absolute; top:0; left:0; width:100%; height:2px;
+    background:linear-gradient(90deg, transparent, var(--jedi), transparent);
+    opacity:0.6;
+  }
+
+  .bullets{ list-style:none; display:flex; flex-direction:column; gap:12px; }
+  .bullets li{ display:flex; gap:10px; font-size:15px; line-height:1.7; color:var(--ink); }
+  .bullets li::before{ content:"▸"; color:var(--jedi); flex-shrink:0; }
+
+  /* result image */
+  .result-figure{ text-align:center; }
+  .result-img{
+    width:100%; max-width:520px; border-radius:16px; border:1px solid var(--panel-line);
+    box-shadow:0 20px 50px rgba(0,0,0,0.5), 0 0 0 1px rgba(111,216,255,0.08);
+  }
+  .result-caption{
+    margin-top:14px; font-size:13.5px; color:var(--ink-dim);
+  }
+  .result-caption a{ color:var(--jedi); text-decoration:none; border-bottom:1px dashed var(--panel-line); }
+  .result-caption a:hover{ color:#fff; }
+  .badge-row{ display:flex; gap:8px; justify-content:center; margin-top:16px; flex-wrap:wrap; }
+  .badge{
+    font-family:'Chakra Petch', sans-serif; font-size:11.5px; font-weight:600; letter-spacing:0.05em;
+    padding:5px 12px; border-radius:99px; border:1px solid var(--panel-line); color:var(--ink-dim);
+  }
+
+  /* table */
+  .table-scroll{ overflow-x:auto; }
+  table{ width:100%; border-collapse:collapse; font-size:14px; min-width:520px; }
+  thead th{
+    text-align:left; font-family:'Chakra Petch', sans-serif; font-weight:600; font-size:12.5px;
+    letter-spacing:0.06em; color:var(--jedi); padding:10px 14px; border-bottom:1px solid var(--panel-line);
+  }
+  tbody td{ padding:13px 14px; border-bottom:1px solid rgba(255,255,255,0.05); vertical-align:top; line-height:1.6; }
+  tbody tr:hover{ background:rgba(111,216,255,0.05); }
+  .kw-chip{
+    display:inline-block; background:var(--jedi-soft); color:var(--jedi);
+    font-size:12px; font-weight:700; padding:3px 9px; border-radius:8px; margin:2px 4px 2px 0;
+  }
+  .reply-text{ color:var(--ink-dim); }
+
+  /* live terminal */
+  .terminal{
+    background:#060910; border:1px solid var(--panel-line); border-radius:16px; padding:20px 22px;
+    font-family:'Chakra Petch', sans-serif;
+  }
+  .terminal-head{ display:flex; align-items:center; gap:8px; margin-bottom:16px; }
+  .terminal-dot{ width:9px; height:9px; border-radius:50%; }
+  .terminal-title{ font-size:12px; letter-spacing:0.1em; color:var(--ink-dim); margin-left:6px; }
+  .terminal-log{
+    min-height:120px; max-height:220px; overflow-y:auto; display:flex; flex-direction:column; gap:10px;
+    margin-bottom:14px; font-family:'Noto Sans KR', sans-serif;
+  }
+  .msg{ font-size:14px; line-height:1.6; padding:10px 14px; border-radius:12px; max-width:85%; }
+  .msg.me{ align-self:flex-end; background:var(--jedi-soft); color:#fff; border:1px solid var(--panel-line); }
+  .msg.luke{ align-self:flex-start; background:rgba(255,207,107,0.10); color:var(--ink); border:1px solid rgba(255,207,107,0.2); }
+  .msg.luke b{ color:var(--gold); }
+  .terminal-input{ display:flex; gap:10px; }
+  .terminal-input input{
+    flex:1; background:rgba(255,255,255,0.04); border:1px solid var(--panel-line); border-radius:10px;
+    padding:11px 14px; color:var(--ink); font-family:'Noto Sans KR', sans-serif; font-size:14px; outline:none;
+  }
+  .terminal-input input:focus{ border-color:var(--jedi); }
+  .terminal-input button{
+    background:var(--jedi); color:#04121a; border:none; border-radius:10px; padding:0 20px;
+    font-family:'Chakra Petch', sans-serif; font-weight:700; font-size:13px; cursor:pointer;
+  }
+  .terminal-input button:hover{ filter:brightness(1.08); }
+  .terminal-hint{ margin-top:10px; font-size:12px; color:var(--ink-dim); }
+
+  footer{
+    margin-top:70px; text-align:center; color:var(--ink-dim); font-size:13.5px;
+    padding-top:24px; border-top:1px solid var(--panel-line);
+  }
+  footer .sign{ font-family:'Chakra Petch', sans-serif; color:var(--gold); font-weight:600; margin-top:6px; display:block; }
+
+  @media (max-width:520px){
+    .panel{ padding:20px 18px; }
+  }
+</style>
 </head>
 <body>
 
-  <!-- NAV -->
-  <nav>
-    <div class="nav-logo">이윤임</div>
-    <ul class="nav-links">
-      <li><a href="#about">소개</a></li>
-      <li><a href="#education">학력</a></li>
-      <li><a href="#skills">기술</a></li>
-      <li><a href="#strengths">강점</a></li>
-      <li><a href="#learning">학습</a></li>
-    </ul>
-  </nav>
+<div class="wrap">
 
-  <!-- HERO -->
-  <section id="hero">
-    <div class="hero-content">
-      <div class="hero-badge">Game Content · AI · Vibe Coding</div>
-      <h1 class="hero-name">이<span>윤임</span></h1>
-      <p class="hero-title">게임콘텐츠 전공 교수 · 공학박사 · 바이브 코더</p>
-      <p class="hero-desc">
-        원하는 것이 있으면 될 때까지 포기하지 않는 사람.<br>
-        솔직하게, 강하게, 나답게.
-      </p>
-      <div class="hero-tags">
-        <span class="tag">유한대학교</span>
-        <span class="tag">컴퓨터공학과</span>
-        <span class="tag">게임콘텐츠전공</span>
-        <span class="tag">상명대 게임학 박사</span>
-        <span class="tag">서울 서초구</span>
-      </div>
-    </div>
-  </section>
+  <header>
+    <span class="eyebrow">VIBE CODING · 방학특강 2026</span>
+    <h1>오늘은 챗봇을 만들어 보았어요!</h1>
+    <p class="sub">컴퓨터공학과 학생들과 함께하는 바이브 코딩 방학특강 — AI 에이전트를 다루기 전, 나만의 페르소나를 가볍게 만들어보는 실습</p>
+  </header>
 
-  <!-- ABOUT -->
   <section id="about">
-    <div class="fade-in">
-      <span class="section-label">About Me</span>
-      <h2 class="section-title">나는 <span>이런 사람</span>입니다</h2>
+    <div class="sec-head"><span class="sec-num">01</span><span class="sec-title">오늘의 실습</span></div>
+    <div class="panel">
+      <ul class="bullets">
+        <li>AI 에이전트를 사용하기 전에 페르소나를 가볍게 만들어 보기 위한 실습을 진행했음</li>
+        <li>자신만의 캐릭터를 만들어, 이를 활용할 수 있는 능력을 갖추기 위한 실습임</li>
+      </ul>
     </div>
-    <div class="about-grid">
-      <div class="about-card fade-in">
-        <h3>한 단어로</h3>
-        <p>까칠함 — 기준이 명확하고, 타협하지 않는 에너지</p>
-      </div>
-      <div class="about-card fade-in">
-        <h3>색깔로 표현하면</h3>
-        <p>빨간색 — 에너지가 높고 강렬하며 존재감이 뚜렷한 사람</p>
-      </div>
-      <div class="about-card fade-in">
-        <h3>가장 자랑스러운 점</h3>
-        <p>원하는 것이 생기면 포기하지 않고 끝까지 해내는 집념</p>
-      </div>
-      <div class="about-card fade-in">
-        <h3>계기</h3>
-        <p>학생들에게 포트폴리오 웹사이트 제작 시범을 보여주기 위해</p>
-      </div>
-      <div class="about-quote fade-in">
-        <p>어릴 때 꿈이 선생님이었는데, 막상 되고 나니 생각과 다른 것들도 있더라고요. 그래도 여기까지 왔고, 지금도 새로운 것을 배우며 학생들 앞에 서고 있습니다.</p>
-        <cite>— 이윤임, 교수이자 바이브 코더</cite>
+  </section>
+
+  <section id="result">
+    <div class="sec-head"><span class="sec-num">02</span><span class="sec-title">결과물</span></div>
+    <div class="panel result-figure">
+      <img class="result-img" src="https://luriluan0-a11y.github.io/myInfo/image/147_chatBot_Luke.png" alt="루크 스카이워커 챗봇 실행 화면">
+      <p class="result-caption">루크 스카이워커로 간단한 챗봇을 만들어 보았음<br>
+        <a href="https://luriluan0-a11y.github.io/myInfo/image/147_chatBot_Luke.png" target="_blank" rel="noopener">이미지 원본 보기 ↗</a>
+      </p>
+      <div class="badge-row">
+        <span class="badge">STAR WARS PERSONA</span>
+        <span class="badge">KEYWORD MATCHING</span>
+        <span class="badge">JS ARRAY BASED</span>
       </div>
     </div>
   </section>
 
-  <!-- EDUCATION -->
-  <section id="education">
-    <div class="fade-in">
-      <span class="section-label">Education</span>
-      <h2 class="section-title">학력 &amp; <span>배경</span></h2>
-    </div>
-    <div class="edu-list">
-      <div class="edu-item fade-in">
-        <div class="edu-icon">🎓</div>
-        <div class="edu-info">
-          <h3>상명대학교 게임학과</h3>
-          <p>박사 · 2023년 졸업</p>
-          <span class="edu-badge">Ph.D.</span>
-        </div>
-      </div>
-      <div class="edu-item fade-in">
-        <div class="edu-icon">📘</div>
-        <div class="edu-info">
-          <h3>상명대학교 게임학과</h3>
-          <p>석사 졸업</p>
-          <span class="edu-badge">M.S.</span>
-        </div>
-      </div>
-      <div class="edu-item fade-in">
-        <div class="edu-icon">💻</div>
-        <div class="edu-info">
-          <h3>컴퓨터공학 학사</h3>
-          <p>학부 졸업 · 학업과 직장 병행</p>
-          <span class="edu-badge">B.S. Computer Science</span>
-        </div>
-      </div>
-      <div class="edu-item fade-in">
-        <div class="edu-icon">🧠</div>
-        <div class="edu-info">
-          <h3>상담심리학 학사</h3>
-          <p>학부 졸업</p>
-          <span class="edu-badge">B.A. Counseling Psychology</span>
-        </div>
-      </div>
-      <div class="edu-item fade-in">
-        <div class="edu-icon">🏫</div>
-        <div class="edu-info">
-          <h3>유한대학교 컴퓨터공학과 게임콘텐츠전공</h3>
-          <p>현재 재직 · 교수</p>
-          <span class="edu-badge">현직</span>
-        </div>
+  <section id="table">
+    <div class="sec-head"><span class="sec-num">03</span><span class="sec-title">키워드 · 대화 테스트 데이터</span></div>
+    <div class="panel">
+      <div class="table-scroll">
+        <table>
+          <thead>
+            <tr><th style="width:40%">키워드</th><th>루크의 답변</th></tr>
+          </thead>
+          <tbody id="tableBody"></tbody>
+        </table>
       </div>
     </div>
   </section>
 
-  <!-- SKILLS -->
-  <section id="skills">
-    <div class="fade-in">
-      <span class="section-label">Skills</span>
-      <h2 class="section-title">기술 <span>스택</span></h2>
-    </div>
-    <div class="skills-grid">
-      <div class="skill-card fade-in">
-        <div class="skill-card-title">프로그래밍 언어</div>
-        <div class="skill-chips">
-          <span class="chip highlight">HTML / CSS</span>
-          <span class="chip highlight">JavaScript</span>
-          <span class="chip">Java</span>
-          <span class="chip">C#</span>
+  <section id="demo">
+    <div class="sec-head"><span class="sec-num">04</span><span class="sec-title">직접 테스트해보기</span></div>
+    <div class="panel">
+      <div class="terminal">
+        <div class="terminal-head">
+          <span class="terminal-dot" style="background:var(--sithred)"></span>
+          <span class="terminal-dot" style="background:var(--gold)"></span>
+          <span class="terminal-dot" style="background:var(--sabergreen)"></span>
+          <span class="terminal-title">LUKE_CHATBOT.TERMINAL</span>
         </div>
-      </div>
-      <div class="skill-card fade-in">
-        <div class="skill-card-title">데이터베이스</div>
-        <div class="skill-chips">
-          <span class="chip">MySQL</span>
-          <span class="chip">SQLite</span>
-          <span class="chip">Apache</span>
+        <div class="terminal-log" id="log">
+          <div class="msg luke"><b>Luke</b><br>안녕! 키워드를 입력해서 나와 대화해봐. (예: 이름, 포스, 고민, 심심 …)</div>
         </div>
-      </div>
-      <div class="skill-card fade-in">
-        <div class="skill-card-title">디자인 툴</div>
-        <div class="skill-chips">
-          <span class="chip">Figma</span>
-          <span class="chip">Photoshop</span>
-          <span class="chip">그림판 (마스터)</span>
+        <div class="terminal-input">
+          <input type="text" id="chatInput" placeholder="메시지를 입력하세요…" autocomplete="off">
+          <button id="sendBtn">전송</button>
         </div>
-      </div>
-      <div class="skill-card fade-in">
-        <div class="skill-card-title">관심 분야</div>
-        <div class="skill-chips">
-          <span class="chip highlight">Vibe Coding</span>
-          <span class="chip highlight">AI</span>
-          <span class="chip">게임콘텐츠</span>
-          <span class="chip">교육</span>
-        </div>
+        <p class="terminal-hint">위 표에 있는 키워드를 입력하면 루크가 답해줘요.</p>
       </div>
     </div>
   </section>
 
-  <!-- STRENGTHS -->
-  <section id="strengths">
-    <div class="fade-in">
-      <span class="section-label">Strengths</span>
-      <h2 class="section-title">나만의 <span>강점</span></h2>
-    </div>
-    <div class="strengths-grid">
-      <div class="strength-card fade-in">
-        <div class="strength-num">01</div>
-        <h3>포기하지 않는 집념</h3>
-        <p>원하는 것이 있으면 될 때까지 끝까지 밀어붙인다. 학부와 직장을 병행하며 박사까지 마친 게 그 증거.</p>
-      </div>
-      <div class="strength-card fade-in">
-        <div class="strength-num">02</div>
-        <h3>솔직함과 명확함</h3>
-        <p>좋은 것은 좋다, 아닌 것은 아니다. 기준이 명확하고 흔들리지 않는 것이 이 사람의 매력.</p>
-      </div>
-      <div class="strength-card fade-in">
-        <div class="strength-num">03</div>
-        <h3>기획 리더십</h3>
-        <p>팀 프로젝트에서 항상 기획을 맡아 방향을 잡고 이끌었다. 먼저 생각하고 먼저 움직이는 스타일.</p>
-      </div>
-      <div class="strength-card fade-in">
-        <div class="strength-num">04</div>
-        <h3>차별화 마인드</h3>
-        <p>과제나 프로젝트를 할 때 항상 '어떻게 하면 남들과 다르게 할 수 있을까'를 먼저 고민한다.</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- LEARNING -->
-  <section id="learning">
-    <div class="fade-in">
-      <span class="section-label">Learning Journey</span>
-      <h2 class="section-title">배움의 <span>여정</span></h2>
-    </div>
-    <div class="learning-grid">
-      <div class="learning-item fade-in">
-        <h3>인상 깊었던 경험</h3>
-        <ul>
-          <li>지피터스 21기 베스트 오브 베스트 수상</li>
-          <li>지피터스 22기 베스트 오브 베스트 연속 수상</li>
-          <li>바이브 코딩으로 HTML 코드 직접 수정</li>
-          <li>실습 위주 프로그래밍 독학</li>
-        </ul>
-      </div>
-      <div class="learning-item fade-in">
-        <h3>앞으로 나아갈 방향</h3>
-        <ul>
-          <li>AI 지속 학습 및 강의 적용</li>
-          <li>바이브 코딩 학생 교육 확산</li>
-          <li>포트폴리오 웹사이트 제작 시범</li>
-          <li>학생들이 직접 만들 수 있는 환경 구축</li>
-        </ul>
-      </div>
-      <div class="learning-item fade-in">
-        <h3>학습 스타일</h3>
-        <ul>
-          <li>실습형 — 직접 해봐야 이해된다</li>
-          <li>남의 설명보다 내 이해를 우선시</li>
-          <li>다르게 접근하는 것을 즐긴다</li>
-          <li>발표는 어렵지만 끝까지 해낸다</li>
-        </ul>
-      </div>
-      <div class="learning-item fade-in">
-        <h3>추천하고 싶은 것</h3>
-        <ul>
-          <li>바이브 코딩 (꼭 배워야 한다)</li>
-          <li>자바 프로그래밍 기초</li>
-          <li>AI 도구 활용법</li>
-          <li>포트폴리오 직접 만들기</li>
-        </ul>
-      </div>
-    </div>
-  </section>
-
-  <!-- FOOTER -->
   <footer>
-    <div>
-      <div class="footer-name">이윤임</div>
-      <p>유한대학교 컴퓨터공학과 게임콘텐츠전공 교수 · 게임학 박사</p>
-    </div>
-    <div class="footer-dot"></div>
+    바이브 코딩 방학특강 2026 · 챗봇 페르소나 실습
+    <span class="sign">고생하셨습니당~ 🌌</span>
   </footer>
 
-  <script>
-    // Scroll fade-in animation
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('visible');
-        }
-      });
-    }, { threshold: 0.1 });
+</div>
 
-    document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
-  </script>
+<script>
+  const RESPONSES = [
+    { keywords: ['안녕', 'hi', '하이'], reply: '반가워! 오늘은 어떤 모험을 함께할까?' },
+    { keywords: ['이름'], reply: '나는 루크 스카이워커. 타투인 출신의 제다이 기사야.' },
+    { keywords: ['고민'], reply: '힘든 시간이구나... 나도 두려웠던 적이 많았어. 하지만 포기하지 않으면 길이 보여.' },
+    { keywords: ['칭찬', '멋있', '대단', '최고'], reply: '고마워, 하지만 나도 아직 배우는 중이야. 오비완과 요다 덕분이지.' },
+    { keywords: ['놀리', '약해빠'], reply: '하하, 그런 말은 한 솔로한테도 많이 들었어. 그래도 웃어넘길게!' },
+    { keywords: ['심심'], reply: '그럼 라이트세이버 이야기 하나 들려줄까? 아니면 R2-D2 흉내를 내볼까? 삐빅삐빅!' },
+    { keywords: ['포스'], reply: '포스는 우리 모두를 연결하는 에너지야. 믿음을 가지면 너도 느낄 수 있어.' },
+    { keywords: ['제다이'], reply: '제다이는 평화와 정의를 지키는 기사야. 나도 계속 수련 중이지.' },
+    { keywords: ['아버지', '다스베이더', '베이더'], reply: '복잡한 이야기야... 하지만 아버지 안에는 아직 선함이 남아있다고 믿어.' },
+    { keywords: ['라이트세이버', '검'], reply: '이 라이트세이버는 아버지에게 물려받은 거야. 나에게는 정말 소중한 물건이지.' },
+    { keywords: ['잘가', '바이', 'bye'], reply: '포스가 함께하기를. 다음에 또 만나자, 친구!' },
+  ];
+
+  // 표 렌더링
+  const tbody = document.getElementById('tableBody');
+  RESPONSES.forEach(item => {
+    const tr = document.createElement('tr');
+    const kwHtml = item.keywords.map(k => `<span class="kw-chip">${k}</span>`).join('');
+    tr.innerHTML = `<td>${kwHtml}</td><td class="reply-text">${item.reply}</td>`;
+    tbody.appendChild(tr);
+  });
+
+  // 미니 챗봇 데모
+  const log = document.getElementById('log');
+  const input = document.getElementById('chatInput');
+  const sendBtn = document.getElementById('sendBtn');
+
+  function addMsg(who, text){
+    const div = document.createElement('div');
+    div.className = 'msg ' + (who === 'me' ? 'me' : 'luke');
+    div.innerHTML = who === 'me' ? text : `<b>Luke</b><br>${text}`;
+    log.appendChild(div);
+    log.scrollTop = log.scrollHeight;
+  }
+
+  function getReply(text){
+    const lower = text.toLowerCase();
+    const found = RESPONSES.find(item => item.keywords.some(k => lower.includes(k.toLowerCase())));
+    return found ? found.reply : '음... 그건 아직 나도 잘 모르겠어. 다른 이야기를 해볼까?';
+  }
+
+  function send(){
+    const text = input.value.trim();
+    if (!text) return;
+    addMsg('me', text);
+    input.value = '';
+    setTimeout(() => addMsg('luke', getReply(text)), 350);
+  }
+
+  sendBtn.addEventListener('click', send);
+  input.addEventListener('keydown', (e) => { if (e.key === 'Enter') send(); });
+</script>
 </body>
 </html>
