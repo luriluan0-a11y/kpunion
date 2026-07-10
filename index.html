@@ -1,288 +1,89 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>바이브 코딩 방학특강 2026 · 챗봇 만들기</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@500;600;700&family=Noto+Sans+KR:wght@400;500;700;900&display=swap" rel="stylesheet">
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>마스터 루네아 (Master Runea)</title>
 <style>
-  :root{
-    --space-1:#070a14;
-    --space-2:#0d1326;
-    --panel:#111a33;
-    --panel-line:rgba(111,216,255,0.18);
-    --jedi:#6fd8ff;
-    --jedi-soft:rgba(111,216,255,0.12);
-    --gold:#ffcf6b;
-    --sabergreen:#5cff9d;
-    --sithred:#ff5d6c;
-    --ink:#eef2fb;
-    --ink-dim:#8f9ac4;
+  :root {
+    --bg: #0f1020;
+    --bg-soft: #181a30;
+    --ink: #ecebff;
+    --muted: #a6a3c8;
+    --accent: #b69bff;
+    --accent-2: #7fe7d6;
+    --line: #2a2c4a;
   }
-  *{box-sizing:border-box; margin:0; padding:0;}
-  html{scroll-behavior:smooth;}
-  body{
-    font-family:'Noto Sans KR', sans-serif;
-    background:
-      radial-gradient(1.5px 1.5px at 20% 30%, rgba(255,255,255,0.5) 50%, transparent 51%),
-      radial-gradient(1.5px 1.5px at 70% 65%, rgba(255,255,255,0.4) 50%, transparent 51%),
-      radial-gradient(1px 1px at 85% 20%, rgba(255,255,255,0.4) 50%, transparent 51%),
-      radial-gradient(1px 1px at 40% 80%, rgba(255,255,255,0.3) 50%, transparent 51%),
-      radial-gradient(1px 1px at 55% 15%, rgba(255,255,255,0.3) 50%, transparent 51%),
-      radial-gradient(1px 1px at 10% 60%, rgba(255,255,255,0.35) 50%, transparent 51%),
-      radial-gradient(ellipse 60% 40% at 50% 0%, rgba(111,216,255,0.10), transparent 60%),
-      linear-gradient(180deg, var(--space-1), var(--space-2));
-    color:var(--ink);
-    min-height:100vh;
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body {
+    font-family: "Apple SD Gothic Neo", "Pretendard", "Malgun Gothic", system-ui, sans-serif;
+    background: radial-gradient(1200px 600px at 70% -10%, #1c1d3a 0%, var(--bg) 55%);
+    color: var(--ink);
+    line-height: 1.7;
+    min-height: 100vh;
   }
-
-  .wrap{ max-width:880px; margin:0 auto; padding:0 22px 90px; }
-
-  /* header */
-  header{ padding:70px 0 40px; text-align:center; }
-  .eyebrow{
-    display:inline-block; font-family:'Chakra Petch', sans-serif; font-weight:600; font-size:12.5px;
-    letter-spacing:0.28em; color:var(--jedi); border:1px solid var(--panel-line); padding:6px 16px;
-    border-radius:99px; background:var(--jedi-soft); margin-bottom:22px;
+  .wrap { max-width: 820px; margin: 0 auto; padding: 64px 24px 96px; }
+  header { text-align: center; padding: 48px 0 32px; }
+  .badge {
+    display: inline-block; font-size: 13px; letter-spacing: .2em;
+    color: var(--accent-2); border: 1px solid var(--line);
+    padding: 6px 14px; border-radius: 999px; margin-bottom: 22px;
   }
-  h1{
-    font-family:'Chakra Petch', sans-serif; font-weight:700;
-    font-size:clamp(30px, 5.2vw, 46px); line-height:1.25;
-    background:linear-gradient(180deg, #fff 30%, var(--jedi) 130%);
-    -webkit-background-clip:text; background-clip:text; color:transparent;
-    margin-bottom:14px;
+  h1 {
+    font-size: clamp(36px, 7vw, 60px); font-weight: 800; letter-spacing: -.02em;
+    background: linear-gradient(120deg, var(--accent), var(--accent-2));
+    -webkit-background-clip: text; background-clip: text; color: transparent;
   }
-  header p.sub{ color:var(--ink-dim); font-size:15px; max-width:520px; margin:0 auto; line-height:1.7; }
-
-  /* sections */
-  section{ margin-top:52px; }
-  .sec-head{ display:flex; align-items:center; gap:12px; margin-bottom:20px; }
-  .sec-num{
-    font-family:'Chakra Petch', sans-serif; font-weight:700; font-size:13px; color:var(--space-1);
-    background:var(--jedi); width:30px; height:30px; border-radius:8px;
-    display:flex; align-items:center; justify-content:center; flex-shrink:0;
+  .subtitle { color: var(--muted); margin-top: 14px; font-size: 17px; }
+  .cards { display: grid; gap: 18px; margin-top: 44px; }
+  .card {
+    background: linear-gradient(180deg, var(--bg-soft), #14152a);
+    border: 1px solid var(--line); border-radius: 18px; padding: 24px 26px;
+    transition: transform .2s ease, border-color .2s ease;
   }
-  .sec-title{ font-family:'Chakra Petch', sans-serif; font-weight:700; font-size:21px; }
-
-  .panel{
-    background:var(--panel); border:1px solid var(--panel-line); border-radius:18px;
-    padding:26px 28px; position:relative; overflow:hidden;
-  }
-  .panel::before{
-    content:""; position:absolute; top:0; left:0; width:100%; height:2px;
-    background:linear-gradient(90deg, transparent, var(--jedi), transparent);
-    opacity:0.6;
-  }
-
-  .bullets{ list-style:none; display:flex; flex-direction:column; gap:12px; }
-  .bullets li{ display:flex; gap:10px; font-size:15px; line-height:1.7; color:var(--ink); }
-  .bullets li::before{ content:"▸"; color:var(--jedi); flex-shrink:0; }
-
-  /* result image */
-  .result-figure{ text-align:center; }
-  .result-img{
-    width:100%; max-width:520px; border-radius:16px; border:1px solid var(--panel-line);
-    box-shadow:0 20px 50px rgba(0,0,0,0.5), 0 0 0 1px rgba(111,216,255,0.08);
-  }
-  .result-caption{
-    margin-top:14px; font-size:13.5px; color:var(--ink-dim);
-  }
-  .result-caption a{ color:var(--jedi); text-decoration:none; border-bottom:1px dashed var(--panel-line); }
-  .result-caption a:hover{ color:#fff; }
-  .badge-row{ display:flex; gap:8px; justify-content:center; margin-top:16px; flex-wrap:wrap; }
-  .badge{
-    font-family:'Chakra Petch', sans-serif; font-size:11.5px; font-weight:600; letter-spacing:0.05em;
-    padding:5px 12px; border-radius:99px; border:1px solid var(--panel-line); color:var(--ink-dim);
-  }
-
-  /* table */
-  .table-scroll{ overflow-x:auto; }
-  table{ width:100%; border-collapse:collapse; font-size:14px; min-width:520px; }
-  thead th{
-    text-align:left; font-family:'Chakra Petch', sans-serif; font-weight:600; font-size:12.5px;
-    letter-spacing:0.06em; color:var(--jedi); padding:10px 14px; border-bottom:1px solid var(--panel-line);
-  }
-  tbody td{ padding:13px 14px; border-bottom:1px solid rgba(255,255,255,0.05); vertical-align:top; line-height:1.6; }
-  tbody tr:hover{ background:rgba(111,216,255,0.05); }
-  .kw-chip{
-    display:inline-block; background:var(--jedi-soft); color:var(--jedi);
-    font-size:12px; font-weight:700; padding:3px 9px; border-radius:8px; margin:2px 4px 2px 0;
-  }
-  .reply-text{ color:var(--ink-dim); }
-
-  /* live terminal */
-  .terminal{
-    background:#060910; border:1px solid var(--panel-line); border-radius:16px; padding:20px 22px;
-    font-family:'Chakra Petch', sans-serif;
-  }
-  .terminal-head{ display:flex; align-items:center; gap:8px; margin-bottom:16px; }
-  .terminal-dot{ width:9px; height:9px; border-radius:50%; }
-  .terminal-title{ font-size:12px; letter-spacing:0.1em; color:var(--ink-dim); margin-left:6px; }
-  .terminal-log{
-    min-height:120px; max-height:220px; overflow-y:auto; display:flex; flex-direction:column; gap:10px;
-    margin-bottom:14px; font-family:'Noto Sans KR', sans-serif;
-  }
-  .msg{ font-size:14px; line-height:1.6; padding:10px 14px; border-radius:12px; max-width:85%; }
-  .msg.me{ align-self:flex-end; background:var(--jedi-soft); color:#fff; border:1px solid var(--panel-line); }
-  .msg.luke{ align-self:flex-start; background:rgba(255,207,107,0.10); color:var(--ink); border:1px solid rgba(255,207,107,0.2); }
-  .msg.luke b{ color:var(--gold); }
-  .terminal-input{ display:flex; gap:10px; }
-  .terminal-input input{
-    flex:1; background:rgba(255,255,255,0.04); border:1px solid var(--panel-line); border-radius:10px;
-    padding:11px 14px; color:var(--ink); font-family:'Noto Sans KR', sans-serif; font-size:14px; outline:none;
-  }
-  .terminal-input input:focus{ border-color:var(--jedi); }
-  .terminal-input button{
-    background:var(--jedi); color:#04121a; border:none; border-radius:10px; padding:0 20px;
-    font-family:'Chakra Petch', sans-serif; font-weight:700; font-size:13px; cursor:pointer;
-  }
-  .terminal-input button:hover{ filter:brightness(1.08); }
-  .terminal-hint{ margin-top:10px; font-size:12px; color:var(--ink-dim); }
-
-  footer{
-    margin-top:70px; text-align:center; color:var(--ink-dim); font-size:13.5px;
-    padding-top:24px; border-top:1px solid var(--panel-line);
-  }
-  footer .sign{ font-family:'Chakra Petch', sans-serif; color:var(--gold); font-weight:600; margin-top:6px; display:block; }
-
-  @media (max-width:520px){
-    .panel{ padding:20px 18px; }
-  }
+  .card:hover { transform: translateY(-3px); border-color: var(--accent); }
+  .card h2 { font-size: 19px; margin-bottom: 10px; color: var(--accent); display: flex; align-items: center; gap: 10px; }
+  .card p { color: var(--muted); font-size: 15.5px; }
+  .tag { color: var(--accent-2); font-weight: 600; }
+  footer { text-align: center; color: var(--muted); font-size: 14px; margin-top: 56px; border-top: 1px solid var(--line); padding-top: 28px; }
+  .dot { width: 8px; height: 8px; border-radius: 50%; background: var(--accent-2); display: inline-block; }
 </style>
 </head>
 <body>
+  <div class="wrap">
+    <header>
+      <span class="badge">MASTER RUNEA</span>
+      <h1>마스터 루네아</h1>
+      <p class="subtitle">Master Runea · 성남(Seongnam), 대한민국</p>
+    </header>
 
-<div class="wrap">
-
-  <header>
-    <span class="eyebrow">VIBE CODING · 방학특강 2026</span>
-    <h1>오늘은 챗봇을 만들어 보았어요!</h1>
-    <p class="sub">컴퓨터공학과 학생들과 함께하는 바이브 코딩 방학특강 — AI 에이전트를 다루기 전, 나만의 페르소나를 가볍게 만들어보는 실습</p>
-  </header>
-
-  <section id="about">
-    <div class="sec-head"><span class="sec-num">01</span><span class="sec-title">오늘의 실습</span></div>
-    <div class="panel">
-      <ul class="bullets">
-        <li>AI 에이전트를 사용하기 전에 페르소나를 가볍게 만들어 보기 위한 실습을 진행했음</li>
-        <li>자신만의 캐릭터를 만들어, 이를 활용할 수 있는 능력을 갖추기 위한 실습임</li>
-      </ul>
-    </div>
-  </section>
-
-  <section id="result">
-    <div class="sec-head"><span class="sec-num">02</span><span class="sec-title">결과물</span></div>
-    <div class="panel result-figure">
-      <img class="result-img" src="https://luriluan0-a11y.github.io/myInfo/image/147_chatBot_Luke.png" alt="루크 스카이워커 챗봇 실행 화면">
-      <p class="result-caption">루크 스카이워커로 간단한 챗봇을 만들어 보았음<br>
-        <a href="https://luriluan0-a11y.github.io/myInfo/image/147_chatBot_Luke.png" target="_blank" rel="noopener">이미지 원본 보기 ↗</a>
-      </p>
-      <div class="badge-row">
-        <span class="badge">STAR WARS PERSONA</span>
-        <span class="badge">KEYWORD MATCHING</span>
-        <span class="badge">JS ARRAY BASED</span>
+    <section class="cards">
+      <div class="card">
+        <h2><span class="dot"></span>소개</h2>
+        <p>마스터 루네아는 대한민국 성남을 기반으로 활동하는 분입니다. 존댓말(정중체)을 선호하시며, 따뜻하고 정돈된 소통을 중시하십니다.</p>
       </div>
-    </div>
-  </section>
 
-  <section id="table">
-    <div class="sec-head"><span class="sec-num">03</span><span class="sec-title">키워드 · 대화 테스트 데이터</span></div>
-    <div class="panel">
-      <div class="table-scroll">
-        <table>
-          <thead>
-            <tr><th style="width:40%">키워드</th><th>루크의 답변</th></tr>
-          </thead>
-          <tbody id="tableBody"></tbody>
-        </table>
+      <div class="card">
+        <h2><span class="dot"></span>뉴스레터 & 교육 활동</h2>
+        <p>선생님들과 함께 <span class="tag">뉴스레터</span>를 만드는 교육 맥락에서 활동하고 계십니다. 《트렌드 코리아 2026》의 키워드를 바탕으로 <span class="tag">신중년(40대~60대)</span>을 타깃으로 한 뉴스레터를 기획·제작한 경험이 있습니다.</p>
       </div>
-    </div>
-  </section>
 
-  <section id="demo">
-    <div class="sec-head"><span class="sec-num">04</span><span class="sec-title">직접 테스트해보기</span></div>
-    <div class="panel">
-      <div class="terminal">
-        <div class="terminal-head">
-          <span class="terminal-dot" style="background:var(--sithred)"></span>
-          <span class="terminal-dot" style="background:var(--gold)"></span>
-          <span class="terminal-dot" style="background:var(--sabergreen)"></span>
-          <span class="terminal-title">LUKE_CHATBOT.TERMINAL</span>
-        </div>
-        <div class="terminal-log" id="log">
-          <div class="msg luke"><b>Luke</b><br>안녕! 키워드를 입력해서 나와 대화해봐. (예: 이름, 포스, 고민, 심심 …)</div>
-        </div>
-        <div class="terminal-input">
-          <input type="text" id="chatInput" placeholder="메시지를 입력하세요…" autocomplete="off">
-          <button id="sendBtn">전송</button>
-        </div>
-        <p class="terminal-hint">위 표에 있는 키워드를 입력하면 루크가 답해줘요.</p>
+      <div class="card">
+        <h2><span class="dot"></span>텍스트 봇 '레온'</h2>
+        <p>Hermes Agent를 기반으로 한 텔레그램 봇 <span class="tag">레온(Leon)</span>을 운영하고 계십니다. 일상적인 보조부터 자동화 작업까지 대화형으로 처리하는 환경을 갖추고 있습니다.</p>
       </div>
-    </div>
-  </section>
 
-  <footer>
-    바이브 코딩 방학특강 2026 · 챗봇 페르소나 실습
-    <span class="sign">고생하셨습니당~ 🌌</span>
-  </footer>
+      <div class="card">
+        <h2><span class="dot"></span>작업 스타일</h2>
+        <p>작은 작업은 스스로 진행하되, 규모가 크거나 되돌리기 어려운 결정은 미리 확인하는 균형 잡힌 방식을 선호하십니다. 불확실한 지점에서는 선택지를 제시받고 직접 골라가는 것을 좋아하십니다.</p>
+      </div>
+    </section>
 
-</div>
-
-<script>
-  const RESPONSES = [
-    { keywords: ['안녕', 'hi', '하이'], reply: '반가워! 오늘은 어떤 모험을 함께할까?' },
-    { keywords: ['이름'], reply: '나는 루크 스카이워커. 타투인 출신의 제다이 기사야.' },
-    { keywords: ['고민'], reply: '힘든 시간이구나... 나도 두려웠던 적이 많았어. 하지만 포기하지 않으면 길이 보여.' },
-    { keywords: ['칭찬', '멋있', '대단', '최고'], reply: '고마워, 하지만 나도 아직 배우는 중이야. 오비완과 요다 덕분이지.' },
-    { keywords: ['놀리', '약해빠'], reply: '하하, 그런 말은 한 솔로한테도 많이 들었어. 그래도 웃어넘길게!' },
-    { keywords: ['심심'], reply: '그럼 라이트세이버 이야기 하나 들려줄까? 아니면 R2-D2 흉내를 내볼까? 삐빅삐빅!' },
-    { keywords: ['포스'], reply: '포스는 우리 모두를 연결하는 에너지야. 믿음을 가지면 너도 느낄 수 있어.' },
-    { keywords: ['제다이'], reply: '제다이는 평화와 정의를 지키는 기사야. 나도 계속 수련 중이지.' },
-    { keywords: ['아버지', '다스베이더', '베이더'], reply: '복잡한 이야기야... 하지만 아버지 안에는 아직 선함이 남아있다고 믿어.' },
-    { keywords: ['라이트세이버', '검'], reply: '이 라이트세이버는 아버지에게 물려받은 거야. 나에게는 정말 소중한 물건이지.' },
-    { keywords: ['잘가', '바이', 'bye'], reply: '포스가 함께하기를. 다음에 또 만나자, 친구!' },
-  ];
-
-  // 표 렌더링
-  const tbody = document.getElementById('tableBody');
-  RESPONSES.forEach(item => {
-    const tr = document.createElement('tr');
-    const kwHtml = item.keywords.map(k => `<span class="kw-chip">${k}</span>`).join('');
-    tr.innerHTML = `<td>${kwHtml}</td><td class="reply-text">${item.reply}</td>`;
-    tbody.appendChild(tr);
-  });
-
-  // 미니 챗봇 데모
-  const log = document.getElementById('log');
-  const input = document.getElementById('chatInput');
-  const sendBtn = document.getElementById('sendBtn');
-
-  function addMsg(who, text){
-    const div = document.createElement('div');
-    div.className = 'msg ' + (who === 'me' ? 'me' : 'luke');
-    div.innerHTML = who === 'me' ? text : `<b>Luke</b><br>${text}`;
-    log.appendChild(div);
-    log.scrollTop = log.scrollHeight;
-  }
-
-  function getReply(text){
-    const lower = text.toLowerCase();
-    const found = RESPONSES.find(item => item.keywords.some(k => lower.includes(k.toLowerCase())));
-    return found ? found.reply : '음... 그건 아직 나도 잘 모르겠어. 다른 이야기를 해볼까?';
-  }
-
-  function send(){
-    const text = input.value.trim();
-    if (!text) return;
-    addMsg('me', text);
-    input.value = '';
-    setTimeout(() => addMsg('luke', getReply(text)), 350);
-  }
-
-  sendBtn.addEventListener('click', send);
-  input.addEventListener('keydown', (e) => { if (e.key === 'Enter') send(); });
-</script>
+    <footer>
+      이 페이지는 마스터 루네아에 대해 알려진 사실을 바탕으로 작성되었습니다.<br />
+      추가하고 싶은 내용이 있으면 알려주세요.
+    </footer>
+  </div>
 </body>
 </html>
