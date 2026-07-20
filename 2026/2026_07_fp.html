@@ -192,6 +192,31 @@
     color: var(--ink-soft);
   }
 
+  .pnc-download {
+    display: flex;
+    justify-content: center;
+    margin: 32px 0 0;
+  }
+  .pnc-download-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background: var(--accent);
+    color: #ffffff;
+    font-weight: 700;
+    font-size: 15px;
+    padding: 14px 30px;
+    border-radius: 999px;
+    text-decoration: none;
+    box-shadow: 0 4px 14px var(--shadow);
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
+  }
+  .pnc-download-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px var(--shadow);
+  }
+  .pnc-download-icon { font-size: 16px; line-height: 1; }
+
   .pnc-divider {
     display: flex;
     align-items: center;
@@ -289,6 +314,13 @@
         <div class="pnc-bio-role">현) 안산대학교 교수</div>
         <div class="pnc-bio-role">전국교수노동조합 교육시민연대실장</div>
       </div>
+    </div>
+
+    <div class="pnc-download">
+      <a class="pnc-download-btn" href="2026_07_fp.pdf" download="2026_07_교수논평.pdf">
+        <span class="pnc-download-icon">⬇</span>
+        <span>교수논평 다운로드 받기</span>
+      </a>
     </div>
 
     <div class="pnc-divider">
