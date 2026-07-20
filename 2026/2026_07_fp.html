@@ -161,6 +161,37 @@
     text-align: left;
   }
 
+  .pnc-bio {
+    display: flex;
+    align-items: center;
+    gap: 22px;
+    margin: 48px 0 0;
+    padding: 26px 30px;
+    background: var(--panel);
+    border: 1px solid var(--rule);
+    border-radius: 14px;
+  }
+  .pnc-bio-photo {
+    width: 96px;
+    height: 96px;
+    border-radius: 50%;
+    object-fit: cover;
+    flex-shrink: 0;
+    box-shadow: 0 1px 3px var(--shadow);
+  }
+  .pnc-bio-text { display: flex; flex-direction: column; gap: 4px; }
+  .pnc-bio-name {
+    font-family: "Noto Serif KR", Georgia, serif;
+    font-weight: 700;
+    font-size: 16px;
+    color: var(--ink);
+    margin-bottom: 2px;
+  }
+  .pnc-bio-role {
+    font-size: 13.5px;
+    color: var(--ink-soft);
+  }
+
   .pnc-divider {
     display: flex;
     align-items: center;
@@ -249,6 +280,15 @@
       <p>'페미니즘'이라는 단어가 조심스러워 '여성학'이라 에둘러 말하던 시절을 뒤로하고, 이제는 페미니스트가 되려 한다. 더 이상 '나는 무해하다'며 안주하지 않고, 익숙한 관성에 제동을 걸 참이다. 누군가를 배제하는 낡은 농담에 동조하며 웃어주지 않고, 당연하게 요구되는 부당한 감정 노동을 단호히 거절하는 몽니도 부려 보겠다. 마땅히 짊어져야 할 책임을 회피하겠다는 뜻이 아니다. 동등한 연구자임에도 성별에 따라 다르게 할당되는 보이지 않는 굴레를 내 몫의 일상에서부터 거부해 보겠다는 의미다.</p>
 
       <p>공고한 생태계를 바꾸는 일은 제도만으로 완성되지 않는다. 아무리 훌륭한 제도를 갖추더라도, 그 공간을 채우는 우리 각자의 치열한 자각과 일상적 실천이 동반되지 않는다면 힘은 언제든 무기가 되어 타인을 겨누게 된다. 일상의 관성적인 흐름을 조금씩 끊어내는 개입들이 모일 때, 비로소 가장자리에 선 이들이 눈치 보지 않고 온전히 자신의 목소리를 낼 수 있는 최소한의 틈이 열릴 것이다. 살아남아 선배가 된 나와 당신이 가진 연차와 자원이, 누군가를 베거나 미묘하게 억압하는 무기가 되지는 않기를 바란다. '성평등'이라는 단어가 필요 없는 완벽한 세계가 어느 날 마법처럼 도래하지는 않겠지만, 스스로 무해하다는 착각을 버리고 기꺼이 불편해지기를 선택하는 이 지루한 실천만이 견고한 구조에 진짜 균열을 낼 수 있다.(끝)</p>
+    </div>
+
+    <div class="pnc-bio">
+      <img class="pnc-bio-photo" src="https://luriluan0-a11y.github.io/kpunion/image/kimMH.jpg" alt="김명하">
+      <div class="pnc-bio-text">
+        <div class="pnc-bio-name">논평인: 김명하</div>
+        <div class="pnc-bio-role">현) 안산대학교 교수</div>
+        <div class="pnc-bio-role">전국교수노동조합 교육시민연대실장</div>
+      </div>
     </div>
 
     <div class="pnc-divider">
