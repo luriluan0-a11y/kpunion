@@ -1,0 +1,333 @@
+<title>사업비 방식 지원을 극복해야 우리 고등교육의 미래가 열린다</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@500;700;900&family=Noto+Sans+KR:wght@400;500;700&display=swap');
+
+  .pnc-article {
+    --bg: #ffffff;
+    --surface: #ffffff;
+    --panel: #eef1e8;
+    --ink: #000000;
+    --ink-soft: #565f72;
+    --ink-faint: #8a90a0;
+    --accent: #1f4fc4;
+    --accent-soft: #e7edfb;
+    --gold: #c98a1f;
+    --gold-soft: #faf1de;
+    --rule: #dfe2d6;
+    --shadow: rgba(28, 35, 49, 0.08);
+
+    background: var(--bg);
+    color: var(--ink);
+    font-family: "Noto Sans KR", "Apple SD Gothic Neo", "Malgun Gothic", sans-serif;
+    line-height: 1.8;
+    -webkit-font-smoothing: antialiased;
+  }
+
+
+  .pnc-article * { box-sizing: border-box; }
+
+  .pnc-wrap {
+    max-width: 760px;
+    margin: 0 auto;
+    padding: 56px 24px 72px;
+  }
+
+  .pnc-kicker {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    justify-content: center;
+    margin-bottom: 28px;
+  }
+  .pnc-kicker-line {
+    height: 1px;
+    width: 28px;
+    background: var(--gold);
+  }
+  .pnc-kicker-text {
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 0.28em;
+    color: var(--gold);
+    text-transform: uppercase;
+  }
+
+  .pnc-headline {
+    font-family: "Noto Serif KR", Georgia, serif;
+    font-weight: 900;
+    font-size: clamp(28px, 4.4vw, 40px);
+    line-height: 1.42;
+    text-align: center;
+    color: var(--ink);
+    text-wrap: balance;
+    margin: 0 0 32px;
+  }
+
+  .pnc-byline {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 48px;
+  }
+  .pnc-byline-card {
+    background: var(--surface);
+    border: 1px solid var(--rule);
+    border-radius: 999px;
+    padding: 8px 22px 8px 8px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    box-shadow: 0 1px 3px var(--shadow);
+  }
+  .pnc-byline-photo {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    object-fit: cover;
+    flex-shrink: 0;
+  }
+  .pnc-byline-text {
+    display: flex;
+    align-items: baseline;
+    gap: 8px;
+  }
+  .pnc-byline-name {
+    font-family: "Noto Serif KR", Georgia, serif;
+    font-weight: 700;
+    font-size: 16px;
+    color: var(--ink);
+  }
+  .pnc-byline-role {
+    font-size: 13.5px;
+    color: var(--ink-soft);
+  }
+
+  .pnc-body p {
+    font-size: 17px;
+    color: var(--ink);
+    margin: 0 0 26px;
+    text-align: justify;
+    word-break: keep-all;
+  }
+  .pnc-body p:first-of-type {
+    font-size: 19px;
+    color: var(--ink);
+    font-weight: 500;
+  }
+  .pnc-body p:first-of-type::first-letter {
+    font-family: "Noto Serif KR", Georgia, serif;
+    font-weight: 900;
+    font-size: 2.6em;
+    color: var(--accent);
+    float: left;
+    line-height: 0.85;
+    padding: 0.05em 0.08em 0 0;
+  }
+
+  .pnc-pullquote {
+    margin: 44px 0;
+    padding: 30px 34px;
+    background: var(--accent-soft);
+    border-left: 4px solid var(--accent);
+    border-radius: 4px 14px 14px 4px;
+    position: relative;
+  }
+  .pnc-pullquote::before {
+    content: "“";
+    font-family: "Noto Serif KR", Georgia, serif;
+    font-size: 52px;
+    line-height: 0;
+    position: absolute;
+    top: 34px;
+    left: 14px;
+    color: var(--accent);
+    opacity: 0.35;
+  }
+  .pnc-pullquote p {
+    font-family: "Noto Serif KR", Georgia, serif;
+    font-weight: 700;
+    font-size: 21px;
+    line-height: 1.6;
+    color: var(--ink);
+    margin: 0;
+    padding-left: 28px;
+    text-wrap: balance;
+  }
+
+  .pnc-bio {
+    display: flex;
+    align-items: center;
+    gap: 22px;
+    margin: 48px 0 0;
+    padding: 26px 30px;
+    background: var(--panel);
+    border: 1px solid var(--rule);
+    border-radius: 14px;
+  }
+  .pnc-bio-photo {
+    width: 96px;
+    height: 96px;
+    border-radius: 50%;
+    object-fit: cover;
+    flex-shrink: 0;
+    box-shadow: 0 1px 3px var(--shadow);
+  }
+  .pnc-bio-text { display: flex; flex-direction: column; gap: 4px; }
+  .pnc-bio-name {
+    font-family: "Noto Serif KR", Georgia, serif;
+    font-weight: 700;
+    font-size: 16px;
+    color: var(--ink);
+    margin-bottom: 2px;
+  }
+  .pnc-bio-role {
+    font-size: 13.5px;
+    color: var(--ink-soft);
+  }
+
+  .pnc-download {
+    display: flex;
+    justify-content: center;
+    margin: 32px 0 0;
+  }
+  .pnc-download-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background: var(--accent);
+    color: #ffffff;
+    font-weight: 700;
+    font-size: 15px;
+    padding: 14px 30px;
+    border-radius: 999px;
+    text-decoration: none;
+    box-shadow: 0 4px 14px var(--shadow);
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
+  }
+  .pnc-download-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px var(--shadow);
+  }
+  .pnc-download-icon { font-size: 16px; line-height: 1; }
+
+  .pnc-divider {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin: 52px 0 40px;
+  }
+  .pnc-divider span {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: var(--gold);
+  }
+  .pnc-divider .pnc-dline {
+    width: 60px;
+    height: 1px;
+    background: var(--rule);
+    border-radius: 0;
+  }
+
+  .pnc-footer {
+    text-align: center;
+    padding-top: 8px;
+  }
+  .pnc-date {
+    font-size: 14px;
+    color: var(--ink-faint);
+    letter-spacing: 0.04em;
+    margin-bottom: 10px;
+  }
+  .pnc-org {
+    font-family: "Noto Serif KR", Georgia, serif;
+    font-weight: 700;
+    font-size: 18px;
+    color: var(--ink);
+    letter-spacing: 0.5em;
+    padding-left: 0.5em;
+  }
+  @media (max-width: 480px) {
+    .pnc-wrap { padding: 40px 18px 56px; }
+    .pnc-pullquote { padding: 26px 22px; }
+    .pnc-pullquote p { font-size: 19px; padding-left: 20px; }
+    .pnc-org { letter-spacing: 0.3em; }
+  }
+</style>
+
+<div class="pnc-article">
+  <div class="pnc-wrap">
+
+    <div class="pnc-kicker">
+      <span class="pnc-kicker-line"></span>
+      <span class="pnc-kicker-text">전국교수노동조합 교수논평</span>
+      <span class="pnc-kicker-line"></span>
+    </div>
+
+    <h1 class="pnc-headline">사업비 방식 지원을 극복해야<br>우리 고등교육의 미래가 열린다</h1>
+
+    <div class="pnc-byline">
+      <div class="pnc-byline-card">
+        <img class="pnc-byline-photo" src="https://kpunion.vercel.app/image/KimMH_seoul.png" alt="김명환">
+        <div class="pnc-byline-text">
+          <span class="pnc-byline-name">김명환</span>
+          <span class="pnc-byline-role">전 전국교수노동조합 부위원장 · 서울대 명예교수</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="pnc-body">
+      <p>대한민국 헌법 제 31조 4항(“교육의 자주성·전문성·정치적 중립성 및 대학의 자율성은 법률이 정하는 바에 의하여 보장된다”)에 나오듯이 대학의 자율성은 헌법적 가치이다. 그러나 그 구체적 의미에 대해서는 사람마다 제각기 생각이 다를 수 있고, 또 시대와 장소에 따라 구체적인 뜻이 조금씩 바뀌게 마련이다. 그래서 다분히 이상화된 대학의 모습에 근거한 경직된 자율성 주장은 대학 안에서든 밖에서든 설득력을 떨어뜨릴 위험이 크다. 자율성과 짝을 이루는 개념인 ‘책무성’ 역시 의미가 고정되었다고 보기 어렵다. 특정한 연구가 우리 사회에 당장 도움이 되지 않고 오랜 기간에 걸쳐 인력과 예산만 소모하는 것으로 보일지라도 수십 년 이상의 시간이 흘러 그 축적된 성과가 우리 사회의 생존이나 발전에 결정적인 역할을 할 수도 있다. 어떤 기준과 방식으로 대학의 연구와 교육에 대해 사회적 ‘책무성’의 견지에서 책임을 묻고 공적 지원 여부를 결정할 것인지는 결코 간단한 문제가 아닌 것이다.</p>
+
+      <p>그런데 대학의 자율성이 시대와 장소를 막론하고 변치않을 기본적 의미마저 훼손당하는 최악의 경우도 있다. 바로 현재 한국 대학의 자율성이 짓밟히는 가장 큰 원인이라고 할 정부의 대학 재정지원 방식이다. 민주화 이후 역대 정부를 거치면서 시장주의적 이념과 기율이 점점 강해지는 가운데 대학 재정지원은 아무리 그 종류가 다양해져도 선정을 위해 경쟁해야 하는 사업비 지원 방식에서 벗어날 줄을 모른다. 현재의 이재명 정부도 예외가 아니다.</p>
+
+      <p>2024년의 민주당 총선 공약으로 처음 채택된 ‘서울대 10개 만들기’는 내란 진압의 와중에서 치러진 작년 6월의 대선에서도 이재명 정부의 대표적인 고등교육 정책으로 내세워졌다. 그러나 실제 사업 공고 과정에서 9개의 거점국립대에 대한 고른 지원 정책이 아니라 3개 대학을 선정하는 방식으로 바뀌고 말았다.</p>
+
+      <p>결국 9개의 거점국립대들은 3개 대학에 뽑히기 위해 심사과정에서 점수를 올릴 방안들을 혈안이 되어 찾고 있다. 이 과정에서 교육부가 밝힌 방침, 즉 “교원 승진·정년 보장 심사 기준을 브랜드 단과대학부터 수도권 주요 사립대 수준으로 강화하고, 엄격한 실적 평가 체계를 마련하는 등 단계적으로 강도 높은 내부 혁신을 확대해 나갈 방침”을 충실히 따르거나 더 앞서 나가려는 과열 경쟁이 벌어지지 않을 수 없다. 가령, 인문학·사회과학 등 학문적 특성이 다른 전공 분야에서도 무차별적으로 소위 해외 1급 학술지(A&HCI, SCI, SSCI 등) 게재를 의무화하고, 심지어 이명박 정부 시절의 영어 강의 비율 확대를 내세우기까지 하는 부작용이 발생하는 중이다.</p>
+
+      <p>여기서 잊지 말아야 할 사실은, 수도권 주요 사립대 일부가 대학 랭킹을 올리기 위해 무리한 실적을 요구한 결과, (내가 재직했던 서울대를 포함하여) 일부 상위권 대학 교수들이 해외의 ‘약탈적 학술지’, ‘부실 학술지’에 논문을 투고하거나 WASET, OMICS 같은 가짜 학회 참석을 실적으로 꾸미는 등의 문제가 심각했다는 점이다. 나아가, 최근 언론에도 보도되었듯이, 몇몇 서울의 사립대가 해외 대학의 실적 좋은 교수들을 겸임으로 발령하여 아무런 의무 없이 높은 연봉을 거저 주면서 그들의 연구실적을 자기 대학 실적으로 삼는 소위 ‘학술용병’ 탓에 교육부 감사가 시작되었다는 추문도 넘길 수 없다.</p>
+
+      <p>교육부가 요구하는 QS(Quacquarelli Symonds) 랭킹 향상 역시 마찬가지다. 앞으로 한국 대학이 세계 각지에서 외국인 유학생을 더 많이 더 다양하게 유치할 필요가 있는 것은 엄연한 현실이며, 이를 위한 지표로서 개별 대학이든 개별 대학의 특정 학과든 QS 랭킹에 관심을 쏟는 일은 어느 정도 불가피함을 인정할 수 있다. 그러나 QS 랭킹이 우리 대학의 연구와 교육 발전의 지표가 되기에는 본질적인 한계를 안고 있다.</p>
+
+      <p>국내 대학들이 QS 랭킹 순위를 신속하게 올리는 방법은 주로 국제화 지수 분야라고 한다. 가령, 다수의 저자가 있는 (주로 이공계) 논문에 해외 유명 학자들을 공짜로 끼워 넣음으로써 점수를 쉽게 올리거나, 평가의 큰 비중을 차지하는 평판도 점수를 위해 대학 보직교수 등이 해외 대학 보직교수들과의 네트워크를 활용해 평판도를 평가할 평가위원단에 서로 이름을 올려 점수를 올려주는 방식이다. 기업 활동에 비유하건대, 제품의 품질 개선보다는 홍보와 광고에 비용을 더 쓰는 격이며, 심하게 말하면 국제 학술 부패 카르텔이 형성되는 꼴이다.</p>
+
+      <p>서울의 모 사립대는 국내 입시에서 활용되는 대학서열에 비해 QS 랭킹이 매우 높게 나온다. 이 대학은 위의 방법 외에도 경제가 어렵고 정정이 불안한 글로벌 사우스에 속한 국가의 연구 실적이 좋은 학자들을 발굴하여 비교적 싼 값에 채용해 논문 실적 양산에 집중하게 하는 동시에 외국인 교수 강의 비율을 높여 QS의 국제화 지수 점수를 크게 올렸음은 비밀 아닌 비밀이다.</p>
+
+      <div class="pnc-pullquote">
+        <p>이 모든 것이 대학의 자율성을 그 뿌리로부터 야금야금 파먹게 된다.</p>
+      </div>
+
+      <p>이 모든 것이 대학의 자율성을 그 뿌리로부터 야금야금 파먹게 된다. 그렇다면 대안은 무엇인가? 막대한 예산이 신속하게 들어가야 하는 일부 첨단연구의 경우는 경쟁을 통해 선정하는 사업비 방식이 불가피할 것이다. 그러나 적어도 거점국립대를 대상으로 한 ‘서울대 10개 만들기’ 사업, 이제 바뀐 명칭으로는 ‘성장엔진 연계 지역인재 양성사업’의 경우는 거점국립대의 공공성과 사회적 책무에 합당한 방식을 택해야 한다. 그것은 일정한 예산을 배정하고 그 예산의 사용에 대해 대학에 자율권을 주는 것이다. 평가 주기도 최소 5년 단위로 충분히 보장하여 지난 5년의 성과가 부족하면 예산을 삭감하고 성과가 뛰어나면 예산을 증액해주는 방식으로 가야 할 것이다. 대학은 대학대로 구성원들의 치열하고 민주적인 논의를 통해 대학의 발전 방향을 정하고 그에 따라 합심하여 노력해야 한다. 이것이 대학의 자율성과 학내 민주주의를 발전시키는 지름길이다.</p>
+
+      <p>사업비 방식의 치명적 문제는 다른 곳에도 있다. 사업비 방식이기 때문에 특정 대학이 집중 투자하고 싶은 유망하고 자신있는 분야가 있어도 교수 추가 채용에 필요한 인건비로 예산을 돌려쓰기 어려운 것이다. 대학의 교육과 연구는 훌륭한 학자의 숫자가 많아야 질적으로 향상된다. 해외의 경쟁 상대로 삼고 싶은 대학들이 주요 분야에서 교수, 박사급연구원, 박사과정 학생을 어느 정도나 확보하고 있는지 우리와 비교해보길 바란다. 우리는 도무지 시너지 효과를 기대하기 힘든 구멍가게 수준에 머물고 있다. 학문 선진국으로 도약하려면 이것부터 뜯어고쳐야만 한다.(끝)</p>
+    </div>
+
+    <div class="pnc-bio">
+      <img class="pnc-bio-photo" src="https://kpunion.vercel.app/image/KimMH_seoul.png" alt="김명환">
+      <div class="pnc-bio-text">
+        <div class="pnc-bio-name">논평인: 김명환</div>
+        <div class="pnc-bio-role">전 전국교수노동조합 부위원장</div>
+        <div class="pnc-bio-role">서울대 명예교수</div>
+      </div>
+    </div>
+
+    <div class="pnc-download">
+      <a class="pnc-download-btn" href="2026_08_교수논평.pdf" download="2026_08_교수논평.pdf">
+        <span class="pnc-download-icon">⬇</span>
+        <span>교수논평 다운로드 받기</span>
+      </a>
+    </div>
+
+    <div class="pnc-divider">
+      <span class="pnc-dline"></span>
+      <span></span>
+      <span class="pnc-dline"></span>
+    </div>
+
+    <div class="pnc-footer">
+      <div class="pnc-date">2026년 7월 13일</div>
+      <div class="pnc-org">전국교수노동조합</div>
+    </div>
+
+  </div>
+</div>
