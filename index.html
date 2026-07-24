@@ -31,7 +31,7 @@
     -webkit-font-smoothing: antialiased;
   }
 
-  .wrap { max-width: 760px; margin: 0 auto; padding: 56px 24px 96px; }
+  .wrap { max-width: 980px; margin: 0 auto; padding: 56px 24px 96px; }
 
   header { text-align: center; margin-bottom: 56px; }
 
@@ -66,12 +66,12 @@
   .banner {
     display: flex;
     align-items: center;
-    gap: 20px;
+    gap: 16px;
     background: var(--panel);
     border: 1px solid var(--rule);
     border-left: 5px solid var(--gold);
     border-radius: 4px 14px 14px 4px;
-    padding: 26px 30px;
+    padding: 16px 24px;
     text-decoration: none;
     color: inherit;
     box-shadow: 0 1px 3px var(--shadow);
@@ -85,20 +85,26 @@
 
   .banner-body { flex: 1; min-width: 0; }
   .banner-issue {
-    font-size: 12.5px;
+    font-size: 12px;
     font-weight: 700;
     letter-spacing: 0.12em;
     color: var(--accent);
     text-transform: uppercase;
-    margin-bottom: 8px;
+    margin-bottom: 4px;
+  }
+  .banner-heading {
+    display: flex;
+    align-items: baseline;
+    flex-wrap: wrap;
+    gap: 8px;
   }
   .banner-title {
     font-family: "Noto Serif KR", Georgia, serif;
     font-weight: 700;
-    font-size: 20px;
+    font-size: 18px;
+    line-height: 1.4;
     color: var(--ink);
     word-break: keep-all;
-    margin-bottom: 6px;
   }
   .banner-sub {
     font-size: 14px;
@@ -125,8 +131,8 @@
 
   @media (max-width: 480px) {
     .wrap { padding: 40px 18px 72px; }
-    .banner { padding: 20px 20px; gap: 14px; }
-    .banner-title { font-size: 18px; }
+    .banner { padding: 14px 18px; gap: 12px; }
+    .banner-title { font-size: 16px; }
   }
 </style>
 </head>
@@ -138,16 +144,32 @@
         <span class="kicker-text">전국교수노동조합</span>
         <span class="kicker-line"></span>
       </div>
-      <h1>교수논평</h1>
+      <h1>교수논평·성명서</h1>
       <p class="subtitle">전국교수노동조합 전문가들의 목소리</p>
     </header>
 
     <section class="list">
+      <a class="banner" href="2026/2026_08_fp.html">
+        <div class="banner-body">
+          <div class="banner-issue">교수논평 2026-08</div>
+          <div class="banner-title">사업비 방식 지원을 극복해야 우리 고등교육의 미래가 열린다</div>
+          </div>
+        <span class="banner-arrow">→</span>
+      </a>
+      <a class="banner" href="2026/20260723_kp_statement.html">
+        <div class="banner-body">
+          <div class="banner-issue">성명서 2026.07.23</div>
+          <div class="banner-title">대학교원노조의 정치적 기본권 제한에 종지부를 찍은 교원노조법 위헌 결정을 환영한다</div>
+          </div>
+        <span class="banner-arrow">→</span>
+      </a>
       <a class="banner" href="2026/2026_07_fp.html">
         <div class="banner-body">
           <div class="banner-issue">교수논평 2026-07</div>
-          <div class="banner-title">'무해하다'는 착각</div>
-          <div class="banner-sub">권력이 무기가 되지 않는 생태계를 위하여</div>
+          <div class="banner-heading">
+            <div class="banner-title">'무해하다'는 착각</div>
+            <div class="banner-sub">권력이 무기가 되지 않는 생태계를 위하여</div>
+          </div>
         </div>
         <span class="banner-arrow">→</span>
       </a>
