@@ -1,0 +1,298 @@
+<title>징계가 교육을 통제하는 수단이 되어서는 안 된다</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@500;700;900&family=Noto+Sans+KR:wght@400;500;700&display=swap');
+
+  .pnc-article {
+    --bg: #ffffff;
+    --surface: #ffffff;
+    --panel: #eef1e8;
+    --ink: #000000;
+    --ink-soft: #565f72;
+    --ink-faint: #8a90a0;
+    --accent: #1f4fc4;
+    --accent-soft: #e7edfb;
+    --gold: #c98a1f;
+    --gold-soft: #faf1de;
+    --rule: #dfe2d6;
+    --shadow: rgba(28, 35, 49, 0.08);
+
+    background: var(--bg);
+    color: var(--ink);
+    font-family: "Noto Sans KR", "Apple SD Gothic Neo", "Malgun Gothic", sans-serif;
+    line-height: 1.8;
+    -webkit-font-smoothing: antialiased;
+  }
+
+
+  .pnc-article * { box-sizing: border-box; }
+
+  .pnc-wrap {
+    max-width: 760px;
+    margin: 0 auto;
+    padding: 56px 24px 72px;
+  }
+
+  .pnc-kicker {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    justify-content: center;
+    margin-bottom: 28px;
+  }
+  .pnc-kicker-line {
+    height: 1px;
+    width: 28px;
+    background: var(--gold);
+  }
+  .pnc-kicker-text {
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 0.28em;
+    color: var(--gold);
+    text-transform: uppercase;
+  }
+
+  .pnc-headline {
+    font-family: "Noto Serif KR", Georgia, serif;
+    font-weight: 900;
+    font-size: clamp(28px, 4.4vw, 40px);
+    line-height: 1.42;
+    text-align: center;
+    color: var(--ink);
+    text-wrap: balance;
+    margin: 0 0 32px;
+  }
+
+  .pnc-byline {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 48px;
+  }
+  .pnc-byline-card {
+    background: var(--surface);
+    border: 1px solid var(--rule);
+    border-radius: 999px;
+    padding: 8px 22px 8px 8px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    box-shadow: 0 1px 3px var(--shadow);
+  }
+  .pnc-byline-photo {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    object-fit: cover;
+    flex-shrink: 0;
+  }
+  .pnc-byline-text {
+    display: flex;
+    align-items: baseline;
+    gap: 8px;
+  }
+  .pnc-byline-name {
+    font-family: "Noto Serif KR", Georgia, serif;
+    font-weight: 700;
+    font-size: 16px;
+    color: var(--ink);
+  }
+  .pnc-byline-role {
+    font-size: 13.5px;
+    color: var(--ink-soft);
+  }
+
+  .pnc-body p {
+    font-size: 17px;
+    color: var(--ink);
+    margin: 0 0 26px;
+    text-align: justify;
+    word-break: keep-all;
+  }
+  .pnc-body p:first-of-type {
+    font-size: 19px;
+    color: var(--ink);
+    font-weight: 500;
+  }
+  .pnc-body p:first-of-type::first-letter {
+    font-family: "Noto Serif KR", Georgia, serif;
+    font-weight: 900;
+    font-size: 2.6em;
+    color: var(--accent);
+    float: left;
+    line-height: 0.85;
+    padding: 0.05em 0.08em 0 0;
+  }
+
+  .pnc-pullquote {
+    margin: 44px 0;
+    padding: 30px 34px;
+    background: var(--accent-soft);
+    border-left: 4px solid var(--accent);
+    border-radius: 4px 14px 14px 4px;
+    position: relative;
+  }
+  .pnc-pullquote::before {
+    content: "“";
+    font-family: "Noto Serif KR", Georgia, serif;
+    font-size: 52px;
+    line-height: 0;
+    position: absolute;
+    top: 34px;
+    left: 14px;
+    color: var(--accent);
+    opacity: 0.35;
+  }
+  .pnc-pullquote p {
+    font-family: "Noto Serif KR", Georgia, serif;
+    font-weight: 700;
+    font-size: 21px;
+    line-height: 1.6;
+    color: var(--ink);
+    margin: 0;
+    padding-left: 28px;
+    text-wrap: balance;
+    text-align: left;
+  }
+
+  .pnc-bio {
+    display: flex;
+    align-items: center;
+    gap: 22px;
+    margin: 48px 0 0;
+    padding: 26px 30px;
+    background: var(--panel);
+    border: 1px solid var(--rule);
+    border-radius: 14px;
+  }
+  .pnc-bio-photo {
+    width: 96px;
+    height: 96px;
+    border-radius: 50%;
+    object-fit: cover;
+    flex-shrink: 0;
+    box-shadow: 0 1px 3px var(--shadow);
+  }
+  .pnc-bio-text { display: flex; flex-direction: column; gap: 4px; }
+  .pnc-bio-name {
+    font-family: "Noto Serif KR", Georgia, serif;
+    font-weight: 700;
+    font-size: 16px;
+    color: var(--ink);
+    margin-bottom: 2px;
+  }
+  .pnc-bio-role {
+    font-size: 13.5px;
+    color: var(--ink-soft);
+  }
+
+  .pnc-divider {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin: 52px 0 40px;
+  }
+  .pnc-divider span {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: var(--gold);
+  }
+  .pnc-divider .pnc-dline {
+    width: 60px;
+    height: 1px;
+    background: var(--rule);
+    border-radius: 0;
+  }
+
+  .pnc-footer {
+    text-align: center;
+    padding-top: 8px;
+  }
+  .pnc-date {
+    font-size: 14px;
+    color: var(--ink-faint);
+    letter-spacing: 0.04em;
+    margin-bottom: 10px;
+  }
+  .pnc-org {
+    font-family: "Noto Serif KR", Georgia, serif;
+    font-weight: 700;
+    font-size: 18px;
+    color: var(--ink);
+    letter-spacing: 0.5em;
+    padding-left: 0.5em;
+  }
+  @media (max-width: 480px) {
+    .pnc-wrap { padding: 40px 18px 56px; }
+    .pnc-pullquote { padding: 26px 22px; }
+    .pnc-pullquote p { font-size: 19px; padding-left: 20px; }
+    .pnc-org { letter-spacing: 0.3em; }
+  }
+</style>
+
+<div class="pnc-article">
+  <div class="pnc-wrap">
+
+    <div class="pnc-kicker">
+      <span class="pnc-kicker-line"></span>
+      <span class="pnc-kicker-text">전국교수노동조합 교수논평</span>
+      <span class="pnc-kicker-line"></span>
+    </div>
+
+    <h1 class="pnc-headline">징계가 교육을 통제하는<br>수단이 되어서는 안 된다</h1>
+
+    <div class="pnc-byline">
+      <div class="pnc-byline-card">
+        <img class="pnc-byline-photo" src="https://kpunion.vercel.app/image/JoKS.png" alt="조경순">
+        <div class="pnc-byline-text">
+          <span class="pnc-byline-name">조경순</span>
+          <span class="pnc-byline-role">전국교수노동조합 사무처장 · 서일대학교 교수</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="pnc-body">
+      <p>대학에서 징계는 공동체의 책임성과 공공성을 지키기 위한 최후의 수단이어야 한다. 사실관계를 충분히 확인하고, 당사자에게 소명할 기회를 보장하며, 위반의 성격과 정도에 상응하는 조치를 취해야 한다. 특히 징계가 교육의 자율성이나 노동조합 활동과 맞물려 있을 때에는 더욱 엄격한 절차와 신중한 판단이 필요하다. 징계권을 교육과 노동을 통제하는 수단으로 쓰기 시작하면, 그 여파는 결국 징계받은 당사자 몇 명에서 멈추지 않는다.</p>
+
+      <p>전국교수노동조합은 한국폴리텍대학이 외부 사업주 위탁 실습교육 과정의 강사료 지급을 문제 삼아 교수 3명에게 감봉 등의 징계처분을 내렸다고 밝혔다. 교수노조는 이 과정에 노조 활동가들을 겨냥한 표적 감사의 성격이 있었으며, 실습교육의 특성과 교수의 교육적 판단을 충분히 고려하지 않은 부당징계라고 주장하고 있다. 한국폴리텍대학은 이에 대해 징계의 근거와 조사 과정, 양정의 타당성을 투명하게 설명해야 한다. 동시에 교수노조가 제기한 의혹과 당사자들의 소명을 독립적이고 공정한 절차를 통해 다시 살펴야 한다.</p>
+
+      <p>직업교육과 실습교육은 일반적인 강의실 수업과 운영 방식이 다르다. 현장 상황과 수강생의 숙련도, 안전, 장비 운용, 실습의 연속성 등을 고려해 교수와 강사가 역할을 조정해야 하는 경우가 적지 않다. 이런 교육적 판단을 행정 서류의 형식이나 사후적인 회계 기준만으로 재단한다면 실습교육은 경직될 수밖에 없다. 물론 공적 재원의 집행에는 명확한 기준과 책임이 따라야 한다. 그러나 기준이 불분명했거나 현장의 관행과 규정 사이에 간극이 있었다면, 대학이 먼저 해야 할 일은 제도를 정비하고 구성원이 예측할 수 있는 지침을 마련하는 것이다. 제도 운영의 책임을 개인에게만 돌리고 중징계부터 내리는 방식은 문제의 해결이 될 수 없다.</p>
+
+      <p>더욱 우려스러운 것은 이번 징계가 노동조합 활동과 관련된 보복 또는 위축 효과를 낳을 수 있다는 점이다. 징계 대상의 선정과 감사 범위가 노조 활동 여부에 따라 달라졌다는 의심이 제기되었다면, 대학은 “규정에 따른 조치”라는 말만 되풀이해서는 안 된다. 누구를 대상으로 어떤 기준에 따라 감사를 실시했는지, 유사한 사례에는 같은 기준을 적용했는지, 징계 수위는 일관되게 결정되었는지를 공개 가능한 범위에서 밝혀야 한다. 이것이 표적 징계라는 의혹을 해소하고 기관의 신뢰를 회복하는 출발점이다.</p>
+
+      <p>교수의 노동조합 활동은 대학 운영을 방해하는 예외적 행동이 아니라 법이 보장한 기본권의 행사다. 대학의 문제를 지적하고 개선을 요구하는 활동 역시 대학의 민주성과 공공성을 높이는 과정이다. 노조 활동을 이유로 감사와 징계의 위험이 커질 수 있다는 인식이 퍼지면 교수들은 부당한 지시나 제도적 문제를 발견해도 침묵하게 된다. 그 결과 교육의 질과 학생의 학습권, 공공기관의 책임성까지 함께 약화된다. 노조 활동의 자유는 조합원만의 권리가 아니라 대학이 스스로 오류를 교정할 수 있게 하는 민주적 안전장치다.</p>
+
+      <div class="pnc-pullquote">
+        <p>노조 활동의 자유는 조합원만의 권리가 아니라 대학이 스스로 오류를 교정할 수 있게 하는 민주적 안전장치다.</p>
+      </div>
+
+      <p>한국폴리텍대학은 공공 직업교육을 책임지는 기관이다. 산업현장에 필요한 인재를 길러내는 일 못지않게, 구성원의 기본권과 교육의 자율성을 지키는 것도 이 기관의 몫이다. 효율과 통제만 앞세운 행정으로는 현장의 창의성도, 책임감도 자라지 않는다. 그런 조직에서 구성원은 규정을 지키는 데 급급할 뿐, 문제를 발견해도 나서지 않는다.</p>
+
+      <p>이에 우리는 한국폴리텍대학에 요구한다. 첫째, 해당 교수들에 대한 징계의 근거와 절차, 양정 기준을 투명하게 밝히고 당사자들의 소명을 충실히 반영해 징계처분을 전면 재검토하라. 둘째, 감사 대상 선정과 조사 과정에서 노동조합 활동을 이유로 한 차별이나 불이익이 없었는지 독립적이고 공정하게 검증하라. 셋째, 외부 위탁 실습교육의 특성에 맞게 강사 운용과 강사료 지급 기준부터 명확히 정비하라 — 그 과정에는 현장 교수와 노동조합이 반드시 참여해야 한다. 넷째, 교수의 교육권과 노동조합 활동의 자유를 존중한다는 원칙, 공개적으로 확인하고 재발 방지 대책도 함께 내놓아야 할 것이다.</p>
+
+      <p>징계권은 강한 권한인 만큼 절제되어야 한다. 교육 현장의 판단을 존중하지 않는 징계, 노동조합의 비판을 위축시키는 징계, 제도의 미비를 개인에게 떠넘기는 징계는 대학을 바로 세우지 못한다. 한국폴리텍대학은 지금이라도 대화와 재검토에 나서야 한다. 교수의 입을 막아서 지켜지는 공공성은 없다. 구성원의 비판과 참여를 제도 개선의 동력으로 삼을 때, 비로소 공공성이라는 말이 제 값을 한다.(끝)</p>
+    </div>
+
+    <div class="pnc-bio">
+      <img class="pnc-bio-photo" src="https://kpunion.vercel.app/image/JoKS.png" alt="조경순">
+      <div class="pnc-bio-text">
+        <div class="pnc-bio-name">논평인: 조경순</div>
+        <div class="pnc-bio-role">전국교수노동조합 사무처장</div>
+        <div class="pnc-bio-role">서일대학교 교수</div>
+      </div>
+    </div>
+
+    <div class="pnc-divider">
+      <span class="pnc-dline"></span>
+      <span></span>
+      <span class="pnc-dline"></span>
+    </div>
+
+    <div class="pnc-footer">
+      <div class="pnc-date">2026년 7월 27일</div>
+      <div class="pnc-org">전국교수노동조합</div>
+    </div>
+
+  </div>
+</div>
