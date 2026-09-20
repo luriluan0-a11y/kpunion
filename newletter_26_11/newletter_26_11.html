@@ -1,0 +1,506 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light">
+<meta name="supported-color-schemes" content="light">
+<title>전국교수노동조합 소식지 26-11</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@500;700;900&family=Noto+Sans+KR:wght@400;500;700&display=swap');
+
+  :root {
+    --bg: #ffffff;
+    --surface: #ffffff;
+    --panel: #eef1e8;
+    --ink: #1c2331;
+    --ink-soft: #565f72;
+    --ink-faint: #8a90a0;
+    --accent: #1f4fc4;
+    --accent-soft: #e7edfb;
+    --gold: #c98a1f;
+    --gold-soft: #faf1de;
+    --rule: #dfe2d6;
+    --shadow: rgba(28, 35, 49, 0.08);
+  }
+
+  * { box-sizing: border-box; }
+
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--ink);
+    font-family: "Noto Sans KR", "Apple SD Gothic Neo", "Malgun Gothic", sans-serif;
+    line-height: 1.8;
+    -webkit-font-smoothing: antialiased;
+    padding-block: env(safe-area-inset-top, 0px) env(safe-area-inset-bottom, 0px);
+  }
+  img { max-width: 100%; display: block; }
+
+  .wrap {
+    max-width: 760px;
+    margin: 0 auto;
+    padding: 0 20px 72px;
+  }
+
+  /* Masthead */
+  .masthead {
+    background: linear-gradient(135deg, #16264f 0%, #1f4fc4 100%);
+    color: #fff;
+    padding: 44px 24px 40px;
+    text-align: center;
+    margin-bottom: 40px;
+  }
+  .masthead-kicker {
+    display: flex; align-items: center; justify-content: center; gap: 10px;
+    margin-bottom: 16px;
+  }
+  .masthead-kicker-line { height: 1px; width: 28px; background: #e0b25a; }
+  .masthead-kicker-text {
+    font-size: 12.5px; font-weight: 700; letter-spacing: 0.3em;
+    color: #e0b25a; text-transform: uppercase;
+  }
+  .masthead h1 {
+    font-family: "Noto Serif KR", Georgia, serif;
+    font-weight: 900;
+    font-size: clamp(24px, 5vw, 34px);
+    margin: 0 0 10px;
+    text-wrap: balance;
+  }
+  .masthead p {
+    margin: 0;
+    font-size: 14.5px;
+    color: #c9d3ee;
+  }
+
+  /* Table of contents */
+  .toc {
+    background: var(--surface);
+    border: 1px solid var(--rule);
+    border-radius: 14px;
+    padding: 22px 24px;
+    margin-bottom: 48px;
+    box-shadow: 0 2px 10px var(--shadow);
+  }
+  .toc-title {
+    font-weight: 700; font-size: 14px; color: var(--accent);
+    letter-spacing: 0.08em; margin-bottom: 14px;
+  }
+  .toc ol { margin: 0; padding: 0 0 0 1.3em; }
+  .toc li { font-size: 15px; margin-bottom: 8px; }
+  .toc li:last-child { margin-bottom: 0; }
+  .toc a { color: var(--ink); text-decoration: none; }
+  .toc a:hover { color: var(--accent); text-decoration: underline; }
+
+  /* Article */
+  .article { margin-bottom: 56px; scroll-margin-top: 16px; }
+  .article-kicker {
+    display: flex; align-items: center; gap: 10px; margin-bottom: 16px;
+  }
+  .article-kicker-line { height: 1px; width: 22px; background: var(--gold); }
+  .article-kicker-text {
+    font-size: 12px; font-weight: 700; letter-spacing: 0.24em;
+    color: var(--gold); text-transform: uppercase;
+  }
+  .article h2 {
+    font-family: "Noto Serif KR", Georgia, serif;
+    font-weight: 900;
+    font-size: clamp(20px, 3.6vw, 26px);
+    line-height: 1.45;
+    margin: 0 0 14px;
+    text-wrap: balance;
+  }
+  .article .sub {
+    font-family: "Noto Serif KR", Georgia, serif;
+    font-weight: 700;
+    font-size: 15.5px;
+    line-height: 1.6;
+    color: var(--ink-soft);
+    margin: 0 0 6px;
+  }
+  .article .sub-block { margin-bottom: 22px; }
+
+  .article p {
+    font-size: 16px;
+    color: var(--ink);
+    margin: 0 0 20px;
+    text-align: justify;
+    word-break: keep-all;
+  }
+
+  .section-label {
+    display: inline-flex; align-items: center; gap: 8px;
+    font-weight: 700; font-size: 15px; color: var(--ink);
+    background: var(--panel);
+    border-radius: 8px;
+    padding: 6px 14px;
+    margin: 30px 0 16px;
+  }
+
+  .agenda-list, .demand-list {
+    list-style: none; margin: 0 0 26px; padding: 0;
+  }
+  .agenda-list li, .demand-list li {
+    display: flex; gap: 12px; align-items: flex-start;
+    font-size: 15px; margin-bottom: 12px;
+  }
+  .agenda-list li:last-child, .demand-list li:last-child { margin-bottom: 0; }
+  .agenda-list .num, .demand-list .num {
+    flex-shrink: 0; width: 22px; height: 22px; border-radius: 50%;
+    background: var(--accent); color: #fff; font-size: 12px; font-weight: 800;
+    display: flex; align-items: center; justify-content: center; margin-top: 2px;
+  }
+
+  .answer-card {
+    background: var(--surface);
+    border: 1px solid var(--rule);
+    border-left: 4px solid var(--accent);
+    border-radius: 4px 12px 12px 4px;
+    padding: 20px 22px;
+    margin: 0 0 18px;
+  }
+  .answer-card .answer-title {
+    font-weight: 700; font-size: 15.5px; color: var(--accent);
+    margin-bottom: 8px;
+  }
+  .answer-card p { margin: 0; font-size: 15px; }
+
+  .quote {
+    margin: 30px 0;
+    padding: 22px 26px;
+    background: var(--gold-soft);
+    border-left: 4px solid var(--gold);
+    border-radius: 4px 12px 12px 4px;
+  }
+  .quote p {
+    font-family: "Noto Serif KR", Georgia, serif;
+    font-weight: 700; font-size: 16.5px; line-height: 1.65;
+    color: var(--ink); margin: 0; text-align: left;
+  }
+
+  .branch-group { margin-bottom: 26px; }
+  .branch-group-title {
+    font-weight: 700; font-size: 15px; color: var(--ink);
+    margin: 0 0 12px; padding-bottom: 8px; border-bottom: 1px solid var(--rule);
+  }
+  .branch-card {
+    background: var(--surface);
+    border: 1px solid var(--rule);
+    border-radius: 10px;
+    padding: 14px 16px;
+    margin-bottom: 10px;
+  }
+  .branch-card:last-child { margin-bottom: 0; }
+  .branch-card .name {
+    font-weight: 700; font-size: 14.5px; color: var(--accent); margin-bottom: 4px;
+  }
+  .branch-card p { margin: 0; font-size: 14.5px; }
+
+  .plan-list { list-style: none; margin: 0 0 26px; padding: 0; }
+  .plan-list li {
+    font-size: 15px; padding: 10px 0; border-bottom: 1px dashed var(--rule);
+  }
+  .plan-list li:last-child { border-bottom: none; }
+
+  figure { margin: 0 0 28px; }
+  figure img { border-radius: 12px; box-shadow: 0 4px 16px var(--shadow); }
+
+  .divider {
+    display: flex; align-items: center; justify-content: center; gap: 10px;
+    margin: 8px 0 48px;
+  }
+  .divider span { width: 6px; height: 6px; border-radius: 50%; background: var(--gold); }
+  .divider .dline { width: 60px; height: 1px; background: var(--rule); }
+
+  .footer { text-align: center; padding-top: 8px; }
+  .footer .date { font-size: 14px; color: var(--ink-faint); letter-spacing: 0.04em; margin-bottom: 10px; }
+  .footer .org {
+    font-family: "Noto Serif KR", Georgia, serif; font-weight: 700; font-size: 17px;
+    color: var(--ink); letter-spacing: 0.5em; padding-left: 0.5em;
+  }
+
+  .top-link {
+    position: fixed; right: 18px; bottom: 18px;
+    width: 40px; height: 40px; border-radius: 50%;
+    background: var(--accent); color: #fff;
+    display: flex; align-items: center; justify-content: center;
+    text-decoration: none; font-size: 16px;
+    box-shadow: 0 4px 14px var(--shadow);
+  }
+
+
+  @media (max-width: 480px) {
+    .wrap { padding: 0 16px 56px; }
+    .masthead { padding: 36px 18px 32px; }
+    .footer .org { letter-spacing: 0.3em; }
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <div class="masthead">
+    <div class="masthead-kicker">
+      <span class="masthead-kicker-line"></span>
+      <span class="masthead-kicker-text">Newsletter 26-11</span>
+      <span class="masthead-kicker-line"></span>
+    </div>
+    <h1>전국교수노동조합 소식지</h1>
+    <p>비정년트랙 차별 해소부터 현장 투쟁까지, 이번 호 주요 소식</p>
+  </div>
+
+  <nav class="toc">
+    <div class="toc-title">이번 호 목차</div>
+    <ol>
+      <li><a href="#a1">교수노조, 교육부 장관 정책간담회 개최</a></li>
+      <li><a href="#a2">제35차 임시대의원대회… 규약 개정 및 투쟁기금 모금 의결</a></li>
+      <li><a href="#a3">한신대지회, 비정년트랙 교원 정년트랙 전환 투쟁 1차 마무리</a></li>
+      <li><a href="#a4">현장 투쟁과 조직 확대 열기 고조… 전국 지부·지회 소식</a></li>
+      <li><a href="#a5">"연구 노동자 노후 안전망 만든다"… 연구자공제회 1주년 토론회</a></li>
+    </ol>
+  </nav>
+
+  <!-- 1 -->
+  <article class="article" id="a1">
+    <div class="article-kicker">
+      <span class="article-kicker-line"></span>
+      <span class="article-kicker-text">정책 간담회</span>
+    </div>
+    <h2>교수노조, 교육부 장관 정책간담회 개최… "비정년트랙 차별 해소·교권 보호 실효성 확보 약속"</h2>
+    <div class="sub-block">
+      <p class="sub">송주명 위원장 5대 핵심 의제 전달… 교육부와 정책대화 창구 가동 합의</p>
+      <p class="sub">중앙교섭 요구 검토중, 대학 민주주의와 사학 공공성 강화를 향한 발걸음</p>
+    </div>
+
+    <p>전국교수노동조합(위원장 송주명)이 지난 9월 15일 오후 2시, 서울 여의도 한국교육시설안전원에서 최교진 교육부 장관과 정책간담회를 가졌다. 약 1시간 동안 진행된 이번 간담회에서 교수노조는 고등교육의 산적한 현안을 해결하고 대학 민주주의를 바로 세우기 위한 5대 의제를 강력히 제안했으며, 교육부로부터 전향적인 답변과 정책 추진 약속을 받아냈다.</p>
+
+    <div class="section-label">고등교육 5대 핵심 의제 교육부장관 간담회</div>
+    <p>송주명 위원장은 현장 교수들의 절박한 목소리를 담아 다음의 다섯 가지 의제에 대한 교수노조의 입장을 엄중히 전달했다.</p>
+    <ol class="agenda-list">
+      <li><span class="num">1</span><span>고등교육 무상화 확대 및 고등교육교부금법 제정</span></li>
+      <li><span class="num">2</span><span>비정년트랙 전임교원 차별 해소 및 정년트랙 전환</span></li>
+      <li><span class="num">3</span><span>사립대학의 공공적 구조전환과 지역대학의 균형발전</span></li>
+      <li><span class="num">4</span><span>교원 신분보장 및 교권침해 문제 개선</span></li>
+      <li><span class="num">5</span><span>대학민주주의 확립과 사학 공공성 강화</span></li>
+    </ol>
+
+    <div class="section-label">주요 현안별 교육부 장관 답변 및 성과</div>
+
+    <div class="answer-card">
+      <div class="answer-title">1. 비정년트랙 교원 차별 해소를 위한 '정책대화 창구' 구축</div>
+      <p>송주명 위원장은 비정년트랙 전임교원의 임금·승진·재임용 등 심각한 차별 실태를 파악하기 위한 전국 단위 실태조사와 실질적 차별 해소 방안 마련, 그리고 지속적인 정책대화를 요청했다. 이에 최교진 교육부 장관은 비정년트랙 교원의 현실에 깊이 공감하며 "구체적인 실태조사를 추진하고 개선방안을 마련하기 위해 교수노조와 교육부 간 소통창구를 구축해 논의를 이어가겠다"고 밝혔다.</p>
+    </div>
+
+    <div class="answer-card">
+      <div class="answer-title">2. 사립대학의 '공공적 구조전환' 공동 정책연구 추진</div>
+      <p>현행 한계대학 퇴출 중심의 구조개선을 넘어, 건전한 사립대가 지역사회에서 공공적 역할을 이어갈 수 있도록 공동 정책연구를 제안했다. 교육부 장관은 "건강한 사립대를 살리는 것은 교육부의 고민이기도 하다"라며 대학구조개선위원회 제안 및 교수노조와의 공동 정책연구 추진을 긍정적으로 검토하겠다고 답변했다.</p>
+    </div>
+
+    <div class="answer-card">
+      <div class="answer-title">3. 교권침해 방지 및 교원소청 결정 이행력 강화</div>
+      <p>교원소청심사위원회 결정 이후에도 재단이나 대학이 유사한 불이익 처분을 반복하는 문제를 지적하고, 교육부 감사의 실효성 제고 및 실질적 제재방안 마련을 촉구했다. 교육부는 현행 이행강제금 제도의 효과를 점검하고 실태조사를 거쳐 실효성 있는 개선방안을 강구하겠다고 응답했다.</p>
+    </div>
+
+    <div class="section-label">개별 대학 현안 대응 및 중앙교섭 추진 현황</div>
+
+    <p class="sub">개별 대학 현안 점검</p>
+    <p>웅지세무대학교의 설립자 자녀 부총장 선임 문제에 대해 교육부는 필요한 확인 절차를 진행 중이라고 밝혔으며, 김포대학교의 반복적 교권침해 및 교육환경·안전 문제에 대해서도 현장 점검을 추진하겠다는 입장을 밝혔다.</p>
+
+    <p class="sub">중앙교섭 본격화 기대</p>
+    <p>교수노조가 9월 5일 요청한 중앙교섭 건은 현재 교육부 대학정책과에서 절차를 검토 중으로, 조만간 구체적인 논의가 가시화될 전망이다.</p>
+
+    <p>이번 교육부 장관 간담회는 비정년트랙 교원 차별 해소, 교권 보호, 사립대 공공성 확보라는 시대적 과제를 교육 당국에 분명하게 각인시킨 성과를 거두었다. 전국교수노동조합은 단순한 약속에 그치지 않고 구체적인 정책과 제도 개선으로 이어질 수 있도록, 향후 진행될 실태조사와 정책협의, 중앙교섭 과정에 당당하고 치밀하게 대응할 방침이다.</p>
+
+    <figure>
+      <img src="01.jpg" alt="교육부 장관 정책간담회 현장">
+    </figure>
+  </article>
+
+  <div class="divider"><span class="dline"></span><span></span><span class="dline"></span></div>
+
+  <!-- 2 -->
+  <article class="article" id="a2">
+    <div class="article-kicker">
+      <span class="article-kicker-line"></span>
+      <span class="article-kicker-text">대의원대회</span>
+    </div>
+    <h2>전국교수노조 제35차 임시대의원대회… 규약 개정 및 투쟁기금 모금 의결</h2>
+
+    <div class="section-label">주요 규약 개정 내용</div>
+
+    <p class="sub">권리·의무 구체화 (제9조)</p>
+    <p>가입 90일 미만 또는 조합비 3회 미납 시 선거권을 제한한다. 정당한 사유 없이 3개월 이상 미납하면 권리를 정지한다.</p>
+
+    <p class="sub">지회 설립 요건 명시 (제24조)</p>
+    <p>조합원 10명 이상 또는 교원 대비 10% 이상 및 기본교육 이수 시 지회를 설립한다. 요건 미달 대학은 지역지회로 구성한다.</p>
+
+    <p class="sub">CMS 출금 절차 명확화 (제57조)</p>
+    <p>매월 21일 정기 출금, 29일 재출금을 진행하며 미납 시 최대 3개월분까지 소급 출금한다.</p>
+
+    <div class="section-label">하반기 투쟁 계획</div>
+    <p>비정년트랙 차별 철폐를 위해 9월부터 11월까지 조합원 1인당 1만 원 이상의 특별기금을 모금한다.</p>
+    <ul class="plan-list">
+      <li>1인 시위: 8~11월 청와대 앞 주 3회 순회 시위 진행</li>
+      <li>국회 토론회: 9월·11월 비정년트랙 문제 쟁점화 및 제도 개선 논의</li>
+      <li>전국교수대회: 11월 둘째 주 300명 규모 총력 투쟁 집회 개최</li>
+    </ul>
+
+    <div class="section-label">현장 대응 및 교섭 현황</div>
+    <p>웅지세무대(해고 손배소)와 김포대(면직 행정심판) 등 부당 징계·해고 사건에서 승소를 이끌어냈다. 신한대와 강릉영동대지회를 신설했으며, 한신대·대구대 등 주요 지회는 임·단협 교섭을 진행 중이다.</p>
+  </article>
+
+  <div class="divider"><span class="dline"></span><span></span><span class="dline"></span></div>
+
+  <!-- 3 -->
+  <article class="article" id="a3">
+    <div class="article-kicker">
+      <span class="article-kicker-line"></span>
+      <span class="article-kicker-text">지회 소식</span>
+    </div>
+    <h2>한신대지회, 비정년트랙 교원 정년트랙 전환 투쟁 1차 마무리</h2>
+    <div class="sub-block">
+      <p class="sub">일방 삭감됐던 석·박사 경력 100% 회복 합의</p>
+      <p class="sub">최초 임용 전 경력 인정·연구년·승진연한 등은 추후 단체교섭에서 협의</p>
+    </div>
+
+    <figure>
+      <img src="02.jpg" alt="한신대지회 농성 현장 1">
+    </figure>
+    <figure>
+      <img src="03.jpg" alt="한신대지회 농성 현장 2">
+    </figure>
+
+    <p>우리 노동조합 한신대지회가 비정년트랙 전임교원의 정년트랙 전환 과정에서 발생한 갈등을 해결하기 위해 이어온 농성을 9월 14일 노사 합의 타결로 일단락지었다.</p>
+
+    <p>그동안 한신대지회는 동일한 업무를 수행함에도 2~3년 단위의 재임용 불안과 임금·수당·연구실 차별에 시달려온 비정년트랙 교원의 처우 개선을 요구해 왔다. 그 결과 지난 6월 23일 학교법인 한신학원 이사회에서 비정년트랙 교원 16명의 정년트랙 전환이 확정된 바 있다.</p>
+
+    <p>그러나 이후 세부 조건 협의 과정에서 학교 측이 석·박사 경력 인정 호봉을 55%로 일방 삭감하고, 기존 교육·연구 경력 불인정 및 연구년 자격 차별을 유지하면서 노사 간 갈등이 심화됐다. 이에 지회는 2학기 개강일인 9월 1일부터 총력투쟁을 선포하고 지회장의 삭발 및 사무국장의 단식농성에 돌입했다.</p>
+
+    <p>수차례 노사협의 끝에 9월 14일, 학교 측이 삭감했던 석·박사 경력을 100% 회복해 호봉에 반영하기로 합의함에 따라 지회는 천막 농성을 해제하고 1차 투쟁을 마무리했다. 지회는 교육·연구 경력 인정 등 남은 요구사항에 대해서도 향후 단체교섭을 통해 지속적으로 협의를 이어나갈 계획이다.</p>
+
+    <figure>
+      <img src="04.jpg" alt="한신대지회 노사 합의 타결">
+    </figure>
+  </article>
+
+  <div class="divider"><span class="dline"></span><span></span><span class="dline"></span></div>
+
+  <!-- 4 -->
+  <article class="article" id="a4">
+    <div class="article-kicker">
+      <span class="article-kicker-line"></span>
+      <span class="article-kicker-text">전국 지부·지회</span>
+    </div>
+    <h2>현장 투쟁과 조직 확대 열기 고조… 전국 지부·지회 소식</h2>
+
+    <p>전국교수노동조합 산하 지회가 신규 설립, 교섭 요구, 대학 당국의 부당 행위 저지 투쟁을 현장에서 적극 전개하고 있다.</p>
+
+    <div class="branch-group">
+      <div class="branch-group-title">신규 지회 설립 및 교섭 개시</div>
+      <div class="branch-card">
+        <div class="name">신한대지회</div>
+        <p>9월 1일 학교법인에 지회 설립을 공식 통보하고, 추후 교섭요구 및 투쟁을 준비중에 있다.</p>
+      </div>
+      <div class="branch-card">
+        <div class="name">서울불교대학원대지회</div>
+        <p>9월 1일 2026년도 단협 체결을 위한 단체교섭을 요구했다.</p>
+      </div>
+      <div class="branch-card">
+        <div class="name">수원여대지회</div>
+        <p>8월 26일 임금교섭 상견례를 개최하며 협상의 첫발을 뗐다.</p>
+      </div>
+    </div>
+
+    <div class="branch-group">
+      <div class="branch-group-title">단체교섭 진행 및 성실교섭 촉구</div>
+      <div class="branch-card">
+        <div class="name">유한대지회</div>
+        <p>교수연구실 일방 배정 시정과 성실교섭을 요구하며 9월 2일 제7차 교섭을 진행했다.</p>
+      </div>
+      <div class="branch-card">
+        <div class="name">ICT폴리텍대</div>
+        <p>8월 31일 제7차 교섭을 열어 단체교섭 비교표에 따른 조항(1~17조 및 보류조항) 심의를 이어갔다.</p>
+      </div>
+      <div class="branch-card">
+        <div class="name">한라대지회</div>
+        <p>8월 27일 강원지방노동위원회 간담회를 통해 학교 측의 교섭 의사를 확인한 뒤 9월 1일 교섭 정상화 공문을 발송했다. 이어 9월 2일 사측의 교섭요구사실 공고를 이끌어냈으며 3일 부당노동행위 구제신청을 취하했다.</p>
+      </div>
+      <div class="branch-card">
+        <div class="name">계원예대지회</div>
+        <p>9월 2일 교섭절차 이행 및 성실교섭을 요구했다.</p>
+      </div>
+      <div class="branch-card">
+        <div class="name">강동대지회</div>
+        <p>8월 26일 2026년도 임금교섭 창구단일화 실무회의를 제안했다.</p>
+      </div>
+    </div>
+
+    <div class="branch-group">
+      <div class="branch-group-title">독소조항 저지 및 대학 정상화 투쟁</div>
+      <div class="branch-card">
+        <div class="name">한신대지회</div>
+        <p>독소조항이 담긴 계약서 서명을 강요하는 대학 측에 맞서 9월 1일 투쟁선포 기자회견을 열었으며, 현재 일방 삭감됐던 석박사 경력 100% 회복 합의를 도출해 투쟁이 마무리된 상황이다.</p>
+      </div>
+      <div class="branch-card">
+        <div class="name">강릉영동대지회</div>
+        <p>9월 4일 교수노조·직원노조·학생 연대 비상대책위원회를 구성하고, 교육부 감사 결과의 철저한 이행과 대학 정상화를 촉구하는 성명을 발표했다.</p>
+      </div>
+      <div class="branch-card">
+        <div class="name">김포대지회</div>
+        <p>9월 1일 집행부 간담회를 열고 지회 주요 현안 대응책을 점검했다.</p>
+      </div>
+    </div>
+  </article>
+
+  <div class="divider"><span class="dline"></span><span></span><span class="dline"></span></div>
+
+  <!-- 5 -->
+  <article class="article" id="a5">
+    <div class="article-kicker">
+      <span class="article-kicker-line"></span>
+      <span class="article-kicker-text">연구자 안전망</span>
+    </div>
+    <h2>"연구 노동자 노후 안전망 만든다"… 연구자공제회 1주년 토론회 개최</h2>
+
+    <figure>
+      <img src="05.jpg" alt="연구자공제회 1주년 토론회 현장">
+    </figure>
+
+    <p>비전임·독립 연구자의 노후 소득 보장을 위한 법정 연구자공제회 설립과 연구자연금 도입 논의가 본격화됐다. 연구자공제회는 지난 11일 서울 마포구 노회찬의집 6411홀에서 창립 1주년 기념 토론회 &lt;연구자 퇴직연금의 가능성&gt;을 개최하고 구체적인 법제화 방안을 발표했다. 이번 토론회에는 전국교수노동조합, 한국비정규교수노동조합, 전국대학원생·비정규연구자노동조합지부 등 주요 학술·노동 단체들이 공동주최로 함께했다.</p>
+
+    <p class="sub">교수노조 "연구자 삶 지탱할 연대의 기틀 마련에 적극 함께할 것"</p>
+    <p>축사에 나선 송주명 전국교수노동조합 위원장은 연구자공제회가 지난 1년간 자립적 상호부조 체계를 구축해 온 노고를 격려했다. 송 위원장은 "연구 노동자가 스스로 삶을 지탱하는 물적 기틀을 마련하는 일은 매우 뜻깊다"며 "교수노조 역시 연구자연금 법제화와 법정 공제회 설립을 위한 연대 투쟁에 적극 동참하겠다"고 밝혔다.</p>
+
+    <div class="quote">
+      <p>연구 노동자가 스스로 삶을 지탱하는 물적 기틀을 마련하는 일은 매우 뜻깊다.</p>
+    </div>
+
+    <p>이어 진행된 라운드테이블에는 김명연 교수노조 상지대 지회장이 함께 참석해 대학 현장의 불안정 연구자들과의 연대 필요성을 피력했다. 김 지회장은 연구 노동자의 당당한 노동권 확보와 노후 안전망 구축을 위해 단위 사업장 및 지회 차원에서도 법정 공제회 추진에 적극 힘을 보태겠다고 전했다.</p>
+
+    <div class="section-label">토론회 핵심 구상</div>
+    <ol class="agenda-list">
+      <li><span class="num">1</span><span><strong>개인별 통합 계좌(CPF) 도입</strong> — 강사, 프로젝트 연구원, 독립연구자 등 연구자 신분이 바뀌더라도 적립금과 가입 기간이 단절 없이 이관·승계되는 단일 계좌 체계를 채택한다.</span></li>
+      <li><span class="num">2</span><span><strong>R&amp;D 간접비 1% 재원 조성</strong> — 국가연구개발비 간접비 1%를 공동 출연해 연간 400억 원 규모의 산업단위 공동근로복지기금을 조성하고, 정부 매칭 지원금을 결합한다.</span></li>
+      <li><span class="num">3</span><span><strong>3단계 입법 로드맵</strong> — 강사 임용계약서 내 소정근로시간 명시 표준화(단기) → 일하는 사람 기본법 공제회 조항 반영(중기) → (가칭)연구자공제회법 단독 제정(중장기) 순으로 추진한다.</span></li>
+    </ol>
+
+    <p>학술·노동계는 이번 토론회를 기점으로 비전임·독립 연구자의 고용 불안정을 해소하고 지속 가능한 연구 환경을 조성하기 위한 대정부·국회 입법 활동을 강화할 방침이다.</p>
+
+    <figure>
+      <img src="06.jpg" alt="연구자공제회 토론회 라운드테이블 1">
+    </figure>
+    <figure>
+      <img src="07.jpg" alt="연구자공제회 토론회 라운드테이블 2">
+    </figure>
+  </article>
+
+  <div class="footer">
+    <div class="date">2026년 9월</div>
+    <div class="org">전국교수노동조합</div>
+  </div>
+
+</div>
+
+<a class="top-link" href="#top" aria-label="맨 위로">↑</a>
+</body>
+</html>
