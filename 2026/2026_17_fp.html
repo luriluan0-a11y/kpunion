@@ -1,0 +1,352 @@
+<title>“무너지는 대학, 정부 책임을 다하라!”</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@500;700;900&family=Noto+Sans+KR:wght@400;500;700&display=swap');
+
+  .pnc-article {
+    --bg: #ffffff;
+    --surface: #ffffff;
+    --panel: #eef1e8;
+    --ink: #000000;
+    --ink-soft: #565f72;
+    --ink-faint: #8a90a0;
+    --accent: #1f4fc4;
+    --accent-soft: #e7edfb;
+    --gold: #c98a1f;
+    --gold-soft: #faf1de;
+    --rule: #dfe2d6;
+    --shadow: rgba(28, 35, 49, 0.08);
+
+    background: var(--bg);
+    color: var(--ink);
+    font-family: "Noto Sans KR", "Apple SD Gothic Neo", "Malgun Gothic", sans-serif;
+    line-height: 1.8;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .pnc-article * { box-sizing: border-box; }
+
+  .pnc-wrap {
+    max-width: 760px;
+    margin: 0 auto;
+    padding: 56px 24px 72px;
+  }
+
+  .pnc-kicker {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    justify-content: center;
+    margin-bottom: 28px;
+  }
+  .pnc-kicker-line { height: 1px; width: 28px; background: var(--gold); }
+  .pnc-kicker-text {
+    font-size: 13px; font-weight: 700; letter-spacing: 0.28em;
+    color: var(--gold); text-transform: uppercase;
+  }
+
+  .pnc-headline {
+    font-family: "Noto Serif KR", Georgia, serif;
+    font-weight: 900;
+    font-size: clamp(26px, 4.4vw, 38px);
+    line-height: 1.42;
+    text-align: center;
+    color: var(--ink);
+    text-wrap: balance;
+    word-break: keep-all;
+    margin: 0 0 14px;
+  }
+  .pnc-sub {
+    font-family: "Noto Serif KR", Georgia, serif;
+    font-weight: 900;
+    font-size: clamp(17px, 2.4vw, 21px);
+    line-height: 1.5;
+    text-align: center;
+    color: var(--ink);
+    text-wrap: balance;
+    margin: 0 0 36px;
+  }
+
+  .pnc-hero {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 48px;
+  }
+  .pnc-hero img {
+    width: 140px;
+    height: auto;
+    display: block;
+  }
+
+  .pnc-body p {
+    font-size: 17px;
+    color: var(--ink);
+    margin: 0 0 26px;
+    text-align: justify;
+    word-break: keep-all;
+  }
+  .pnc-body p:first-of-type {
+    font-size: 19px;
+    color: var(--ink);
+    font-weight: 500;
+  }
+  .pnc-body p:first-of-type::first-letter {
+    font-family: "Noto Serif KR", Georgia, serif;
+    font-weight: 900;
+    font-size: 2.6em;
+    color: var(--accent);
+    float: left;
+    line-height: 0.85;
+    padding: 0.05em 0.08em 0 0;
+  }
+
+  .pnc-pullquote {
+    margin: 44px 0;
+    padding: 30px 34px;
+    background: var(--accent-soft);
+    border-left: 4px solid var(--accent);
+    border-radius: 4px 14px 14px 4px;
+    position: relative;
+  }
+  .pnc-pullquote::before {
+    content: "“";
+    font-family: "Noto Serif KR", Georgia, serif;
+    font-size: 52px; line-height: 0;
+    position: absolute; top: 34px; left: 14px;
+    color: var(--accent); opacity: 0.35;
+  }
+  .pnc-pullquote p {
+    font-family: "Noto Serif KR", Georgia, serif;
+    font-weight: 700; font-size: 21px; line-height: 1.6;
+    color: var(--ink); margin: 0; padding-left: 28px;
+    text-wrap: balance; text-align: left;
+  }
+
+  .pnc-demands {
+    margin: 0 0 40px;
+    padding: 26px 30px;
+    background: var(--panel);
+    border: 1px solid var(--rule);
+    border-radius: 14px;
+  }
+  .pnc-demands-title {
+    font-weight: 700; font-size: 16px; color: var(--ink);
+    margin-bottom: 16px;
+  }
+  .pnc-info { margin: 0; display: grid; grid-template-columns: 52px 1fr; row-gap: 8px; column-gap: 12px; }
+  .pnc-info dt { font-weight: 700; font-size: 15px; color: var(--gold); }
+  .pnc-info dd { margin: 0; font-size: 15.5px; color: var(--ink); word-break: keep-all; }
+
+  .pnc-program { margin: 40px 0; }
+  .pnc-program-title {
+    font-weight: 700; font-size: 16px; color: var(--ink);
+    padding-bottom: 10px; margin-bottom: 14px; border-bottom: 1px solid var(--rule);
+  }
+  .pnc-program ul { list-style: none; margin: 0 0 18px; padding: 0; }
+  .pnc-program li { font-size: 15.5px; margin-bottom: 10px; word-break: keep-all; }
+  .pnc-program .role { display: inline-block; min-width: 44px; font-weight: 700; color: var(--accent); }
+  .pnc-program .who { color: var(--ink-soft); }
+
+  .pnc-points { margin: -20px 0 36px; }
+  .pnc-points div {
+    font-size: 15.5px; font-weight: 500; line-height: 1.6; text-align: center;
+    color: var(--ink-soft); word-break: keep-all; margin-bottom: 4px;
+  }
+
+  .pnc-speaker { margin: 48px 0 16px; word-break: keep-all; }
+  .pnc-speaker-name {
+    display: block; font-family: "Noto Sans KR", sans-serif;
+    font-size: 14px; font-weight: 700; color: var(--accent); margin-bottom: 4px;
+  }
+  .pnc-speaker-title {
+    display: block; font-family: "Noto Serif KR", Georgia, serif;
+    font-size: 20px; font-weight: 700; line-height: 1.5; color: var(--ink);
+  }
+
+  .pnc-stats { margin: 0 0 26px; padding: 24px 28px; }
+  .pnc-stats .pnc-demands-title { margin-bottom: 12px; word-break: keep-all; }
+  .pnc-stats .pnc-info { grid-template-columns: 62px 1fr; }
+
+  .pnc-download {
+    display: flex; justify-content: center; margin: 32px 0 0;
+  }
+  .pnc-download-btn {
+    display: inline-flex; align-items: center; gap: 10px;
+    background: var(--accent); color: #ffffff; font-weight: 700; font-size: 15px;
+    padding: 14px 30px; border-radius: 999px; text-decoration: none;
+    box-shadow: 0 4px 14px var(--shadow);
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
+  }
+  .pnc-download-btn:hover { transform: translateY(-2px); box-shadow: 0 8px 20px var(--shadow); }
+  .pnc-download-icon { font-size: 16px; line-height: 1; }
+
+  .pnc-divider {
+    display: flex; align-items: center; justify-content: center; gap: 10px;
+    margin: 52px 0 40px;
+  }
+  .pnc-divider span { width: 6px; height: 6px; border-radius: 50%; background: var(--gold); }
+  .pnc-divider .pnc-dline { width: 60px; height: 1px; background: var(--rule); border-radius: 0; }
+
+  .pnc-footer { text-align: center; padding-top: 8px; }
+  .pnc-date { font-size: 14px; color: var(--ink-faint); letter-spacing: 0.04em; margin-bottom: 10px; }
+  .pnc-org {
+    font-family: "Noto Serif KR", Georgia, serif; font-weight: 700; font-size: 18px;
+    color: var(--ink); letter-spacing: 0.5em; padding-left: 0.5em;
+  }
+
+  @media (max-width: 480px) {
+    .pnc-wrap { padding: 40px 18px 56px; }
+    .pnc-pullquote { padding: 26px 22px; }
+    .pnc-pullquote p { font-size: 19px; padding-left: 20px; }
+    .pnc-org { letter-spacing: 0.3em; }
+    .pnc-demands { padding: 22px 20px; }
+    .pnc-info { grid-template-columns: 44px 1fr; }
+  }
+
+  /* 본문 첫 문단 장식(큰 첫 글자)이 강조 인용구에는 적용되지 않게 한다 */
+  .pnc-body .pnc-pullquote p { font-size: 21px; font-weight: 700; }
+  .pnc-body .pnc-pullquote p::first-letter {
+    font-family: inherit; font-weight: inherit; font-size: inherit; color: inherit;
+    float: none; line-height: inherit; padding: 0;
+  }
+  @media (max-width: 480px) {
+    .pnc-body .pnc-pullquote p { font-size: 19px; }
+    .pnc-body p { text-align: left; }
+  }
+
+  @media print {
+    .pnc-download { display: none; }
+    .pnc-wrap { padding-top: 24px; }
+  }
+  .pnc-resolution { margin: 8px 0 0; }
+  .pnc-body.pnc-res-body p:first-of-type { font-size: 17px; font-weight: 700; }
+  .pnc-body.pnc-res-body p:first-of-type::first-letter { font: inherit; color: inherit; float: none; line-height: inherit; padding: 0; }
+  .pnc-resolution-sign { text-align: right; font-size: 15px; color: var(--ink-soft); margin: 4px 0 0; }
+  .pnc-program .time { display: inline-block; min-width: 52px; font-weight: 700; color: var(--accent); }
+  .pnc-program-group { font-weight: 700; font-size: 15px; color: var(--gold); margin: 18px 0 8px; }
+</style>
+
+<div class="pnc-article">
+  <div class="pnc-wrap">
+    <div class="pnc-kicker">
+      <span class="pnc-kicker-line"></span>
+      <span class="pnc-kicker-text">전국교수노동조합 보도자료</span>
+      <span class="pnc-kicker-line"></span>
+    </div>
+    <h1 class="pnc-headline">“무너지는 대학, 정부 책임을 다하라!”</h1>
+    <p class="pnc-sub">교수노조, 14일 탑골공원 앞 ‘2026 전국교수대회’ 개최</p>
+
+    <div class="pnc-points">
+      <div>비정년트랙 차별철폐·광역 지역대학연합 구축·사립대학 공공적 구조전환 촉구</div>
+      <div>창립 25주년 기념식 함께 진행… 대회 후 청와대 방향 행진 및 대정부 요구서 전달</div>
+    </div>
+
+    <div class="pnc-hero">
+      <img src="https://kpunion.vercel.app/image/kpunion2_character02.png" alt="전국교수노동조합">
+    </div>
+
+    <div class="pnc-demands">
+      <div class="pnc-demands-title">2026 전국교수대회 개요</div>
+      <dl class="pnc-info">
+        <dt>슬로건</dt><dd>무너지는 대학, 정부 책임을 다하라!</dd>
+        <dt>일시</dt><dd>2026년 11월 14일(토) 오후 2시</dd>
+        <dt>장소</dt><dd>서울 탑골공원 앞</dd>
+        <dt>주최</dt><dd>전국교수노동조합</dd>
+        <dt>사회</dt><dd>조경순 사무처장</dd>
+        <dt>일정</dt><dd>창립 25주년 기념식, 본대회, 청와대 방향 행진 및 마무리집회</dd>
+      </dl>
+    </div>
+
+    <div class="pnc-body">
+      <p>전국교수노동조합(위원장 송주명, 이하 교수노조)은 11월 14일(토) 오후 2시 서울 탑골공원 앞에서 ‘2026 전국교수대회’를 개최한다. “무너지는 대학, 정부 책임을 다하라!”를 슬로건으로 열리는 이번 대회는 비정년트랙 교수에 대한 차별과 지역대학의 존립 위기를 알리고, 고등교육의 공공성을 지키기 위한 정부의 책임 있는 정책 전환을 촉구하는 자리다.</p>
+      <p>교수노조는 학령인구 감소와 수도권 집중으로 지역대학의 교육·연구 기반이 약화되는 가운데, 그 부담이 학생과 교직원에게 전가되고 있다고 지적한다. 비정년트랙 교수들 역시 교육과 연구, 학생 지도와 대학 운영을 담당하는 전임교원이면서도 낮은 임금과 불안정한 고용, 승진·연구 지원의 차별을 겪고 있다. 교수노조는 이러한 문제를 개별 대학과 구성원의 노력만으로 해결할 수 없으며, 국가 차원의 종합적인 대책이 필요하다는 입장이다.</p>
+      <h2 class="pnc-speaker"><span class="pnc-speaker-name">송주명 위원장</span><span class="pnc-speaker-title">“교육의 질은 교수의 삶과 분리될 수 없어… 국가의 인식과 정책 바꿔야”</span></h2>
+      <p>송주명 위원장은 대회사에서 “교육의 질은 교수의 삶과 분리될 수 없다. 재임용을 걱정하며 부당한 대우를 참아야 하고, 생계 때문에 연구할 시간을 확보하지 못하는 교수에게 성과를 말하고 헌신을 요구하는 것은 착취”라며, “비정년트랙 차별철폐와 정년트랙 전환은 교수의 권리를 회복하고 대학교육의 기반을 바로 세우는 과제”라고 밝힐 예정이다.</p>
+      <div class="pnc-pullquote">
+        <p>교육의 질은 교수의 삶과 분리될 수 없다.</p>
+      </div>
+      <p>지역대학 정책에 대해서도 송위원장은 “소수 거점국립대를 집중 지원하면서 나머지 대학에는 각자 살아남으라고 해서는 지역 고등교육의 위기를 해결할 수 없다”라고 지적하고 “거점국립대와 지역 사립대, 전문대가 함께 교육하고 연구하며 발전할 수 있도록 국가가 협력의 기반을 마련하고, 학생의 학습권과 교직원의 고용을 지키면서 대학의 교육 기능을 이어 갈 대안을 제시해야 한다”고 촉구할 계획이다.</p>
+      <div class="pnc-demands pnc-stats">
+        <div class="pnc-demands-title">결의문 4대 요구</div>
+        <dl class="pnc-info">
+          <dt>하나</dt><dd>비정년트랙 차별철폐와 정년트랙 완전 전환을 위한 입법·재정지원</dd>
+          <dt>하나</dt><dd>지역대학이 함께 발전하는 광역 지역대학연합 구축</dd>
+          <dt>하나</dt><dd>사립대학의 공공적 구조전환 과정에서 학생의 학습권과 교직원의 고용 보장</dd>
+          <dt>하나</dt><dd>고등교육재정교부금법 제정과 고등교육 무상화 확대를 통한 국가 책임 강화</dd>
+        </dl>
+      </div>
+      <p>참가자들은 결의문을 통해 이를 촉구하고, 이를 실현하기 위해 비정년트랙과 정년트랙, 국립대와 사립대, 대학과 전문대의 경계를 넘어 연대하며 학생·직원·시민사회와 함께 요구가 예산과 법·제도로 실현될 때까지 공동으로 실천하겠다는 의지를 밝힐 예정이다.</p>
+      <p>한편, 이날 대회 사전행사로 교수노조 창립 25주년 기념식이 약식으로 진행된다. 송주명 위원장의 기념사와 김상곤 제3대 위원장의 축사, 공로패 수여를 통해 교수노동자의 권리를 지켜 온 지난 활동을 돌아보고 앞으로의 과제를 나눌 예정이다.</p>
+      <p>본대회는 송주명 위원장의 대회사와 지역대학 구조전환·비정년트랙 문제에 관한 투쟁 발언으로 이어진다. 민주노총, 민주평등사회를 위한 전국교수연구자협의회, 전국국공립대학교수노동조합, 한국비정규교수노동조합 등 연대단위의 발언과 문화공연, 현장 조합원들의 목소리를 담은 영상 상영, 투쟁결의문 채택 순으로 진행된다.</p>
+      <p>대회를 마친 참가자들은 탑골공원 앞에서 청와대 방향으로 행진한 뒤, 청와대 앞에서 마무리 집회를 진행하고 교수들의 요구사항을 담은 대정부 요구서를 청와대에 전달할 계획이다. 교수노조는 이번 대회를 통해 비정년트랙 차별과 지역대학 위기가 고등교육의 공공성과 우리 사회의 미래를 좌우하는 과제임을 알리고자 한다.</p>
+    </div>
+
+    <div class="pnc-program">
+      <div class="pnc-program-title">대회 순서 · 사회 조경순 사무처장</div>
+      <div class="pnc-program-group">사전대회 · 창립 25주년 기념식</div>
+      <ul>
+        <li><span class="time">14:00</span> 기념사·축사·공로패 수여 <span class="who">— 송주명 위원장, 김상곤 제3대 위원장</span></li>
+      </ul>
+      <div class="pnc-program-group">본대회</div>
+      <ul>
+        <li><span class="time">14:15</span> 민중의례 및 참가자 소개</li>
+        <li><span class="time">14:25</span> 대회사 <span class="who">— 송주명 교수노조 위원장</span></li>
+        <li><span class="time">14:35</span> 투쟁사 <span class="who">— 박철웅 교수노조 사립대 부위원장, 박정원 교수노조 비정년트랙차별철폐위원장</span></li>
+        <li><span class="time">14:45</span> 문화공연 및 영상 <span class="who">— 조용상 용인예술과학대 지회장, 영상(비정년트랙 차별철폐투쟁)</span></li>
+        <li><span class="time">14:55</span> 연대발언 및 축사 <span class="who">— 전호일 민주노총 부위원장, 하상복 민교협 상임공동의장, 임헌영 한국비정규직교수노동조합 사무처장</span></li>
+        <li><span class="time">15:20</span> 결의문 낭독 <span class="who">— 교수노조 지부장단</span></li>
+      </ul>
+      <div class="pnc-program-group">행진 · 마무리집회</div>
+      <ul>
+        <li><span class="time">15:30</span> 청와대 방향 행진</li>
+        <li><span class="time">16:30</span> 투쟁발언 <span class="who">— 전용숙 교수노조 여성부위원장</span></li>
+        <li><span class="time">16:35</span> 대정부요구서 낭독 <span class="who">— 정세은 교수노조 국공립대 부위원장</span></li>
+        <li><span class="time">16:40</span> 대정부요구서 전달</li>
+        <li><span class="time">16:50</span> 폐회 선언</li>
+      </ul>
+    </div>
+
+    <div class="pnc-program pnc-resolution">
+      <div class="pnc-program-title">결의문</div>
+    </div>
+    <div class="pnc-body pnc-res-body">
+      <p>대학이 무너지는데, 정부는 어디에 있는가.</p>
+      <p>학령인구가 줄고 수도권 집중이 심화되면서 지역대학의 존립이 위협받고 있다. 그 속에서 교∙직원은 일자리를 걱정하고, 학생들은 배움을 끝까지 이어갈 수 있을지 불안해하고 있다.</p>
+      <p>정부는 이 위기를 개별 대학과 구성원의 몫으로 떠넘기고 있다. ‘서울대 10개 만들기’로 지역에서도 질 높은 고등교육을 약속했지만, 정작 지원은 소수 거점국립대에만 그치고 있어, 그 밖의 지역대학의 생존과 발전할 수 있는 대책은 제시하지 못하고 있다.</p>
+      <p>대학 안의 현실도 참담하다. 대학교육의 질을 높이려면 교수가 안정적인 여건에서 교육과 연구에 전념할 수 있어야 한다. 그러나 비정년트랙 교수들은 전임교원으로 교육과 연구, 학생 지도와 대학 운영을 담당하면서도 낮은 임금과 불안정한 고용에 시달리고, 승진과 연구 지원에서 공공연한 차별을 받고 있다. 같은 전임교원을 서로 다른 신분으로 갈라 차별하면서 어떻게 학생들에게 공정과 평등을 가르칠 수 있겠는가. 이것이 대한민국의 내일을 가르친다는 대학의 민낯이다.</p>
+      <p>우리는 대학의 위기를 개별 대학에 떠넘기고 구성원의 희생으로 버티게 하는 부당한 체제를 거부한다. 모든 교수가 차별 없이 교육하고 연구할 수 있는 대학, 학생들이 어느 지역에서나 질 높은 고등교육을 누릴 수 있는 사회를 만들기 위해 다음과 같이 요구한다.</p>
+      <h2 class="pnc-speaker"><span class="pnc-speaker-name">하나.</span><span class="pnc-speaker-title">비정년트랙 차별을 철폐하고, 정년트랙 완전 전환을 실현하라!</span></h2>
+      <p>정부는 비정년트랙 전임교원의 규모와 고용·임금·승진·연구 여건에 대한 전수조사를 즉각 실시하고 차별해소와 정년트랙 전환계획을 수립해야 한다. 국회와 정부는 비정년트랙 신규 임용을 동결하고 차별을 금지하며, 재직 교원의 정년트랙 전환을 보장할 법률과 재정지원 방안을 마련해야 한다. 대학은 정부 대책을 기다리기보다 노동조합과 단체협약을 체결하거나 규정 개정을 통해 지금 개선할 수 있는 차별부터 해소하고 정년트랙 전환을 추진해야 한다.</p>
+      <h2 class="pnc-speaker"><span class="pnc-speaker-name">하나.</span><span class="pnc-speaker-title">국가균형발전을 위한 광역 지역대학연합을 구축하라!</span></h2>
+      <p>지역대학의 위기를 극복하려면 소수 거점국립대에 편중된 지원을 넘어 전체 지역대학이 함께 발전할 수 있는 중장기 투자계획이 필요하다. 거점국립대와 지역 사립대, 전문대, 연구기관, 지방정부가 대등하게 참여하는 광역 지역대학연합을 구축하고, 공동 교육과정과 공동학위 운영, 교육·연구 자원의 공유를 확대해야 한다. 이러한 협력이 각 대학의 특성과 학문의 다양성, 대학자치를 존중하면서 지역 전체의 교육·연구 역량을 높이는 방향으로 이루어져야 한다.</p>
+      <h2 class="pnc-speaker"><span class="pnc-speaker-name">하나.</span><span class="pnc-speaker-title">사립대학의 공공적 구조전환을 추진하고, 구성원의 권리를 보장하라!</span></h2>
+      <p>사립대학 구조개편은 공공성과 교육·연구의 질을 높이고 지역의 교육 기반을 유지하는 방향으로 추진되어야 한다. 이를 위해 부실 운영을 초래한 사학재단의 책임을 엄정하게 묻고, 해산정리금 제도를 비롯한 관련 제도를 개선하여 교육 자산이 공공의 교육·연구를 위해 보존되도록 해야 한다. 대학 통폐합과 구조개편 과정에서도 학생의 학습권과 교수·직원의 고용 연속성이 보장되어야 하며, 대학구성원들이 논의와 결정에 실질적으로 참여할 수 있어야 한다.</p>
+      <h2 class="pnc-speaker"><span class="pnc-speaker-name">하나.</span><span class="pnc-speaker-title">고등교육에 대한 국가 책임을 강화하고, 고등교육재정교부금법을 제정하라!</span></h2>
+      <p>고등교육의 안정적인 발전을 위해서는 국가의 지속적이고 책임 있는 재정지원이 필요하다. 정부와 국회는 고등교육재정교부금법을 제정하여 안정적인 재정지원의 기반을 마련하고, 정부책임형 사립대학을 육성해야 한다. 공적 지원은 대학의 공공성과 민주적 운영을 강화하고 교육·연구 여건을 개선하는 데 쓰여야 한다. 아울러 고등교육 무상화를 확대하여 학생과 가계의 부담을 낮추고, 누구나 경제적 여건과 거주 지역에 관계없이 배울 수 있도록 해야 한다.</p>
+      <p>교수도 노동자라고 선언하며 전국교수노동조합을 창립한 지 올해로 25년이다. 우리는 오랜 투쟁으로 그 선언을 현실로 만들어 왔다. 이제 그 지난한 투쟁의 역사 위에서 차별받는 교수의 권리를 지키고, 위기에 놓인 지역대학과 고등교육의 미래를 여는 새로운 역사를 써 나갈 것이다.</p>
+      <p>우리 교수노동자들은 비정년트랙과 정년트랙, 국립대와 사립대, 대학과 전문대의 경계를 넘어 굳게 연대할 것이며, 나아가 학생·직원·시민사회와 함께 우리의 요구가 예산에 반영되고 법과 제도로 실현될 때까지 끝까지 투쟁할 것을 힘차게 결의한다.</p>
+      <p class="pnc-resolution-sign">2026년 11월 14일 · 2026 전국교수대회 참가자 일동</p>
+    </div>
+
+    <div class="pnc-download">
+      <a class="pnc-download-btn" href="20261113보도자료_교수노조_14일_2026_전국교수대회_개최.pdf" download="2026_17_보도자료.pdf">
+        <span class="pnc-download-icon">⬇</span>
+        <span>보도자료 다운로드 받기</span>
+      </a>
+    </div>
+
+    <div class="pnc-divider">
+      <span class="pnc-dline"></span>
+      <span></span>
+      <span class="pnc-dline"></span>
+    </div>
+
+    <div class="pnc-footer">
+      <div class="pnc-date">2026년 11월 13일</div>
+      <div class="pnc-org">전국교수노동조합</div>
+    </div>
+
+  </div>
+</div>
