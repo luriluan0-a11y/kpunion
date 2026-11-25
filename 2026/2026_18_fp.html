@@ -1,0 +1,364 @@
+<title>“차기 교육부 장관은 통합적 교육전문가여야”</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@500;700;900&family=Noto+Sans+KR:wght@400;500;700&display=swap');
+
+  .pnc-article {
+    --bg: #ffffff;
+    --surface: #ffffff;
+    --panel: #eef1e8;
+    --ink: #000000;
+    --ink-soft: #565f72;
+    --ink-faint: #8a90a0;
+    --accent: #1f4fc4;
+    --accent-soft: #e7edfb;
+    --gold: #c98a1f;
+    --gold-soft: #faf1de;
+    --rule: #dfe2d6;
+    --shadow: rgba(28, 35, 49, 0.08);
+
+    background: var(--bg);
+    color: var(--ink);
+    font-family: "Noto Sans KR", "Apple SD Gothic Neo", "Malgun Gothic", sans-serif;
+    line-height: 1.8;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .pnc-article * { box-sizing: border-box; }
+
+  .pnc-wrap {
+    max-width: 760px;
+    margin: 0 auto;
+    padding: 56px 24px 72px;
+  }
+
+  .pnc-kicker {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    justify-content: center;
+    margin-bottom: 28px;
+  }
+  .pnc-kicker-line { height: 1px; width: 28px; background: var(--gold); }
+  .pnc-kicker-text {
+    font-size: 13px; font-weight: 700; letter-spacing: 0.28em;
+    color: var(--gold); text-transform: uppercase;
+  }
+
+  .pnc-headline {
+    font-family: "Noto Serif KR", Georgia, serif;
+    font-weight: 900;
+    font-size: clamp(26px, 4.4vw, 38px);
+    line-height: 1.42;
+    text-align: center;
+    color: var(--ink);
+    text-wrap: balance;
+    word-break: keep-all;
+    margin: 0 0 14px;
+  }
+  .pnc-sub {
+    font-family: "Noto Serif KR", Georgia, serif;
+    font-weight: 900;
+    font-size: clamp(17px, 2.4vw, 21px);
+    line-height: 1.5;
+    text-align: center;
+    color: var(--ink);
+    text-wrap: balance;
+    margin: 0 0 36px;
+  }
+
+  .pnc-hero {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 48px;
+  }
+  .pnc-hero img {
+    width: 140px;
+    height: auto;
+    display: block;
+  }
+
+  .pnc-body p {
+    font-size: 17px;
+    color: var(--ink);
+    margin: 0 0 26px;
+    text-align: justify;
+    word-break: keep-all;
+  }
+  .pnc-body p:first-of-type {
+    font-size: 19px;
+    color: var(--ink);
+    font-weight: 500;
+  }
+  .pnc-body p:first-of-type::first-letter {
+    font-family: "Noto Serif KR", Georgia, serif;
+    font-weight: 900;
+    font-size: 2.6em;
+    color: var(--accent);
+    float: left;
+    line-height: 0.85;
+    padding: 0.05em 0.08em 0 0;
+  }
+
+  .pnc-pullquote {
+    margin: 44px 0;
+    padding: 30px 34px;
+    background: var(--accent-soft);
+    border-left: 4px solid var(--accent);
+    border-radius: 4px 14px 14px 4px;
+    position: relative;
+  }
+  .pnc-pullquote::before {
+    content: "“";
+    font-family: "Noto Serif KR", Georgia, serif;
+    font-size: 52px; line-height: 0;
+    position: absolute; top: 34px; left: 14px;
+    color: var(--accent); opacity: 0.35;
+  }
+  .pnc-pullquote p {
+    font-family: "Noto Serif KR", Georgia, serif;
+    font-weight: 700; font-size: 21px; line-height: 1.6;
+    color: var(--ink); margin: 0; padding-left: 28px;
+    text-wrap: balance; text-align: left;
+  }
+
+  .pnc-demands {
+    margin: 0 0 40px;
+    padding: 26px 30px;
+    background: var(--panel);
+    border: 1px solid var(--rule);
+    border-radius: 14px;
+  }
+  .pnc-demands-title {
+    font-weight: 700; font-size: 16px; color: var(--ink);
+    margin-bottom: 16px;
+  }
+  .pnc-info { margin: 0; display: grid; grid-template-columns: 52px 1fr; row-gap: 8px; column-gap: 12px; }
+  .pnc-info dt { font-weight: 700; font-size: 15px; color: var(--gold); }
+  .pnc-info dd { margin: 0; font-size: 15.5px; color: var(--ink); word-break: keep-all; }
+
+  .pnc-program { margin: 40px 0; }
+  .pnc-program-title {
+    font-weight: 700; font-size: 16px; color: var(--ink);
+    padding-bottom: 10px; margin-bottom: 14px; border-bottom: 1px solid var(--rule);
+  }
+  .pnc-program ul { list-style: none; margin: 0 0 18px; padding: 0; }
+  .pnc-program li { font-size: 15.5px; margin-bottom: 10px; word-break: keep-all; }
+  .pnc-program .role { display: inline-block; min-width: 44px; font-weight: 700; color: var(--accent); }
+  .pnc-program .who { color: var(--ink-soft); }
+
+  .pnc-points { margin: -20px 0 36px; }
+  .pnc-points div {
+    font-size: 15.5px; font-weight: 500; line-height: 1.6; text-align: center;
+    color: var(--ink-soft); word-break: keep-all; margin-bottom: 4px;
+  }
+
+  .pnc-speaker { margin: 48px 0 16px; word-break: keep-all; }
+  .pnc-speaker-name {
+    display: block; font-family: "Noto Sans KR", sans-serif;
+    font-size: 14px; font-weight: 700; color: var(--accent); margin-bottom: 4px;
+  }
+  .pnc-speaker-title {
+    display: block; font-family: "Noto Serif KR", Georgia, serif;
+    font-size: 20px; font-weight: 700; line-height: 1.5; color: var(--ink);
+  }
+
+  .pnc-stats { margin: 0 0 26px; padding: 24px 28px; }
+  .pnc-stats .pnc-demands-title { margin-bottom: 12px; word-break: keep-all; }
+  .pnc-stats .pnc-info { grid-template-columns: 62px 1fr; }
+
+  .pnc-download {
+    display: flex; justify-content: center; margin: 32px 0 0;
+  }
+  .pnc-download-btn {
+    display: inline-flex; align-items: center; gap: 10px;
+    background: var(--accent); color: #ffffff; font-weight: 700; font-size: 15px;
+    padding: 14px 30px; border-radius: 999px; text-decoration: none;
+    box-shadow: 0 4px 14px var(--shadow);
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
+  }
+  .pnc-download-btn:hover { transform: translateY(-2px); box-shadow: 0 8px 20px var(--shadow); }
+  .pnc-download-icon { font-size: 16px; line-height: 1; }
+
+  .pnc-divider {
+    display: flex; align-items: center; justify-content: center; gap: 10px;
+    margin: 52px 0 40px;
+  }
+  .pnc-divider span { width: 6px; height: 6px; border-radius: 50%; background: var(--gold); }
+  .pnc-divider .pnc-dline { width: 60px; height: 1px; background: var(--rule); border-radius: 0; }
+
+  .pnc-footer { text-align: center; padding-top: 8px; }
+  .pnc-date { font-size: 14px; color: var(--ink-faint); letter-spacing: 0.04em; margin-bottom: 10px; }
+  .pnc-org {
+    font-family: "Noto Serif KR", Georgia, serif; font-weight: 700; font-size: 18px;
+    color: var(--ink); letter-spacing: 0.5em; padding-left: 0.5em;
+  }
+
+  @media (max-width: 480px) {
+    .pnc-wrap { padding: 40px 18px 56px; }
+    .pnc-pullquote { padding: 26px 22px; }
+    .pnc-pullquote p { font-size: 19px; padding-left: 20px; }
+    .pnc-org { letter-spacing: 0.3em; }
+    .pnc-demands { padding: 22px 20px; }
+    .pnc-info { grid-template-columns: 44px 1fr; }
+  }
+
+  /* 본문 첫 문단 장식(큰 첫 글자)이 강조 인용구에는 적용되지 않게 한다 */
+  .pnc-body .pnc-pullquote p { font-size: 21px; font-weight: 700; }
+  .pnc-body .pnc-pullquote p::first-letter {
+    font-family: inherit; font-weight: inherit; font-size: inherit; color: inherit;
+    float: none; line-height: inherit; padding: 0;
+  }
+  @media (max-width: 480px) {
+    .pnc-body .pnc-pullquote p { font-size: 19px; }
+    .pnc-body p { text-align: left; }
+  }
+
+  @media print {
+    .pnc-download { display: none; }
+    .pnc-wrap { padding-top: 24px; }
+  }
+  .pnc-resolution { margin: 8px 0 0; }
+  .pnc-body.pnc-res-body p:first-of-type { font-size: 17px; font-weight: 700; }
+  .pnc-body.pnc-res-body p:first-of-type::first-letter { font: inherit; color: inherit; float: none; line-height: inherit; padding: 0; }
+  .pnc-resolution-sign { text-align: right; font-size: 15px; color: var(--ink-soft); margin: 4px 0 0; }
+  .pnc-program .time { display: inline-block; min-width: 52px; font-weight: 700; color: var(--accent); }
+  .pnc-program-group { font-weight: 700; font-size: 15px; color: var(--gold); margin: 18px 0 8px; }
+  .pnc-members { font-size: 13px; color: var(--ink-faint); line-height: 1.6; margin-top: 10px; word-break: keep-all; }
+  .pnc-st-sub { font-size: 15.5px; font-weight: 700; color: var(--ink-soft); text-align: center; margin: -4px 0 28px; word-break: keep-all; }
+  .pnc-st-title { font-family: "Noto Serif KR", Georgia, serif; font-weight: 900; font-size: 22px; line-height: 1.5; text-align: center; margin: 0 0 10px; word-break: keep-all; text-wrap: balance; }
+  .pnc-body.pnc-res-body .pnc-pullquote p { font-size: 21px; }
+  @media (max-width: 480px) { .pnc-body.pnc-res-body .pnc-pullquote p { font-size: 19px; } }
+</style>
+
+<div class="pnc-article">
+  <div class="pnc-wrap">
+    <div class="pnc-kicker">
+      <span class="pnc-kicker-line"></span>
+      <span class="pnc-kicker-text">전국교수연구자연대 보도자료</span>
+      <span class="pnc-kicker-line"></span>
+    </div>
+    <h1 class="pnc-headline">“차기 교육부 장관은 통합적 교육전문가여야”</h1>
+    <p class="pnc-sub">전국교수연구자연대, 차기 교육부 장관 인선 관련 성명 발표</p>
+
+    <div class="pnc-points">
+      <div>유·초·중등과 대학의 균형 발전, 대학 공공성 강화, 불안정 교육노동 존중 촉구</div>
+      <div>“단순 부처 수장 교체 넘어 한국 교육 구조적 위기 돌파 계기 돼야”</div>
+      <div>유·초·중등·고등·평생교육 아우르는 통합 시야와 민주적 리더십 요구</div>
+      <div>비정년트랙·비정규교수·대학원생·독립연구자 등 불안정 연구자 처우 개선 강조</div>
+      <div>시장경쟁·구조조정 일변도 탈피, 국가 재정 책임과 지역대학 육성 촉구</div>
+    </div>
+
+    <div class="pnc-hero">
+      <img src="https://kpunion.vercel.app/image/kpunion2_character02.png" alt="전국교수노동조합">
+    </div>
+
+    <div class="pnc-demands">
+      <div class="pnc-demands-title">성명 발표 개요</div>
+      <dl class="pnc-info">
+        <dt>일시</dt><dd>2026년 11월 26일(목) 오후 3시 (발표 시점 이후 보도 가능)</dd>
+        <dt>발표</dt><dd>전국교수연구자연대 성명서</dd>
+        <dt>참여</dt><dd>민주평등사회를 위한 전국교수연구자협의회, 전국교수노동조합, 전국국공립대학교수노동조합, 전국대학원생·비정규연구자노동조합, 연구자공제회, 지식공유연구자의집, 한국비정규교수노동조합</dd>
+        <dt>내용</dt><dd>차기 교육부 장관 인선에 관한 5대 자질·비전 요건과 6대 정책 요구</dd>
+        <dt>문의</dt><dd>전국교수연구자연대 / 전국교수노동조합</dd>
+      </dl>
+    </div>
+
+    <div class="pnc-body">
+      <p>전국교수연구자연대(민주평등사회를 위한 전국교수연구자협의회, 전국교수노동조합, 전국국공립대학교수노동조합, 전국대학원생·비정규연구자노동조합, 연구자공제회, 지식공유연구자의집, 한국비정규교수노동조합)는 11월 26일 오후 3시 성명서를 발표하고, 차기 교육부 장관 인선에 관한 5대 자질·비전 요건과 6대 정책 요구사항을 밝혔다.</p>
+      <p>연대는 최교진 교육부 장관 후임 인선을 “단순한 정부 부처의 수장 교체가 아니라 한국 교육이 직면한 구조적 위기를 극복하고, 우리 사회가 지향해야 할 교육의 가치와 미래를 새롭게 정립하는 중요한 계기”로 규정했다.</p>
+      <div class="pnc-pullquote">
+        <p>최교진 교육부 장관의 후임 인선은 단순한 정부 부처의 수장 교체가 아니다.</p>
+      </div>
+      <p>성명서에 따르면 현재 한국 교육은 중대한 전환기에 놓여 있다. 초·중등교육은 입시경쟁과 교육격차, 교권과 학생 인권 문제, 공교육 신뢰 회복이라는 과제를 안고 있으며, 대학은 학령인구 감소와 지역대학 위기, 재정 불안정, 대학 서열화와 교육 불평등, 연구·교육의 질적 저하라는 복합 위기를 겪고 있다. 여기에 인공지능(AI)을 비롯한 기술 변화와 노동시장 재편이 더해지며 교육체제 전반의 근본적 혁신이 요구되고 있다.</p>
+      <p>연대는 그럼에도 교육정책이 초·중등교육과 고등교육을 분리 접근하는 한계에서 벗어나지 못하고 있다고 지적했다. 정책 관심과 행정 역량이 특정 단계에 편중되거나, 대학정책이 산업인력 양성과 대학 간 경쟁력 강화라는 협소한 관점에 머물러 교육체제 전체의 균형 발전을 가로막고 있다는 것이다.</p>
+      <p>이에 따라 연대는 차기 교육부 장관이 갖춰야 할 다섯 가지 핵심 요건을 제시했다.</p>
+      <h2 class="pnc-speaker"><span class="pnc-speaker-name">첫째</span><span class="pnc-speaker-title">초·중등교육과 대학교육을 아우르는 통합적 교육전문성</span></h2>
+      <p>학교 현장과 대학 현실을 함께 이해하며 공교육 정상화·교육격차 해소와 대학 자율성·학문적 자유·재정 확충·지역대학 육성·연구역량 강화를 함께 다룰 수 있어야 한다고 밝혔다.</p>
+      <h2 class="pnc-speaker"><span class="pnc-speaker-name">둘째</span><span class="pnc-speaker-title">대학의 공공성·자율성·학문적 자유 강화</span></h2>
+      <p>시장경쟁과 구조조정 위주 해법은 공공적 기능을 약화시키고 교육·연구의 질 저하를 부를 수 있다며, 대학 재정의 국가 책임 강화와 지역대학의 안정적 재정·제도 기반 마련, 정부 과도 통제 및 대학 일방 운영으로부터의 학문적 자유·대학 민주주의 수호를 주문했다.</p>
+      <h2 class="pnc-speaker"><span class="pnc-speaker-name">셋째</span><span class="pnc-speaker-title">불안정 연구자 교육노동의 이해와 개선 의지</span></h2>
+      <p>비정년트랙교수, 비정규교수, 대학원생, 독립연구자 등 불안정 연구자의 교육노동을 이해하고 개선할 의지가 있어야 한다는 것이다. 정규직 교수만으로 대학 교육과 연구가 유지되지 않으며 불안정 고용, 낮은 처우, 제한된 연구 기회, 사회보험·복지 사각지대 등 구조적 차별을 외면한 역량 강화 정책은 공허한 구호에 불과하다고 강조했다.</p>
+      <h2 class="pnc-speaker"><span class="pnc-speaker-name">넷째</span><span class="pnc-speaker-title">교육의 공공성과 민주주의를 실현할 철학과 리더십</span></h2>
+      <p>교육이 시장 논리나 정권의 정치적 이해관계에 종속되어서는 안 되며, 교사·교수·학생·학부모·교육노동자·연구자 등 교육주체의 참여와 소통을 보장하고 일방적 행정 지시와 성과주의 평가를 넘어서는 민주적 리더십을 발휘해야 한다고 밝혔다.</p>
+      <h2 class="pnc-speaker"><span class="pnc-speaker-name">다섯째</span><span class="pnc-speaker-title">인구구조 변화와 AI 시대에 대응하는 국가 교육체제 장기 비전</span></h2>
+      <p>학령인구 감소와 지역소멸, 디지털 전환·AI 확산에 맞서 개별 대학 생존 경쟁이나 단기 인력 양성을 넘어 국가 차원의 교육체제 재설계와 지역대학 위기 극복, 수도권·비수도권 격차 해소, 대학 서열화 완화, 평생·성인교육 확대를 통한 전 생애 교육권 보장을 요구했다.</p>
+      <p>연대는 정부를 향해 다음 6대 사항을 분명히 고려할 것을 촉구했다.</p>
+      <div class="pnc-demands pnc-stats">
+        <div class="pnc-demands-title">6대 정책 요구</div>
+        <dl class="pnc-info">
+          <dt>하나</dt><dd>유·초·중등과 고등교육을 아우르는 통합적 교육전문가 임명</dd>
+          <dt>하나</dt><dd>고등교육 공공성·자율성·학문적 자유 강화</dd>
+          <dt>하나</dt><dd>대학 재정 국가 책임 확대 및 지역대학 위기 극복 중장기 고등교육 발전계획 수립</dd>
+          <dt>하나</dt><dd>비정규교수·비정년트랙·대학원생·독립연구자 고용안정·처우 개선·교육·연구권 보장</dd>
+          <dt>하나</dt><dd>교육주체 참여·소통 보장 민주적 교육정책 체계 구축</dd>
+          <dt>하나</dt><dd>유·초·중등·고등교육 연계 국가 교육개혁 장기 비전 및 실행계획 제시</dd>
+        </dl>
+      </div>
+      <p>끝으로 연대는 차기 교육부 장관 인선이 정치적 안배나 특정 분야 이해관계, 단편적 경력·명성에 좌우되어서는 안 된다며, “교육행정의 관리자가 아니라 교육의 미래를 책임지는 공적 지도자”이자 “교육을 아는 사람, 학교와 대학을 함께 이해하는 사람, 교육의 공공성과 민주주의를 실현할 사람”을 임명할 것을 거듭 요구했다.</p>
+    </div>
+
+    <div class="pnc-program pnc-resolution">
+      <div class="pnc-program-title">성명서 전문</div>
+    </div>
+    <h2 class="pnc-st-title">차기 교육부 장관은 교육 전체를 이해하는 통합적 교육전문가여야 한다!</h2>
+    <p class="pnc-st-sub">– 유·초·중등교육과 대학교육의 균형 있는 발전, 대학의 공공성 강화와 교육노동의 존중을 요구한다 –</p>
+    <div class="pnc-body pnc-res-body">
+      <p>최교진 교육부 장관의 후임 인선은 단순한 정부 부처의 수장 교체가 아니다. 한국 교육이 직면한 구조적 위기를 극복하고, 우리 사회가 지향해야 할 교육의 가치와 미래를 새롭게 정립하는 중요한 계기가 되어야 한다.</p>
+      <p>지금 한국 교육은 중대한 전환기에 놓여 있다. 초·중등교육은 입시경쟁과 교육격차, 교권과 학생 인권의 문제, 공교육의 신뢰 회복이라는 과제를 안고 있다. 대학은 학령인구 감소와 지역대학의 위기, 대학 재정의 불안정, 대학 서열화와 교육 불평등, 연구와 교육의 질적 저하라는 복합적인 위기에 직면해 있다. 여기에 인공지능을 비롯한 기술 변화와 노동시장의 재편은 교육체제 전반의 근본적인 혁신을 요구하고 있다.</p>
+      <p>그러나 이러한 위기를 해결해야 할 교육정책은 여전히 초·중등교육과 고등교육을 분리해서 접근하는 경향에서 벗어나지 못하고 있다. 교육부의 정책적 관심과 행정 역량이 특정 교육단계에 편중되거나, 대학정책이 산업인력 양성과 대학 간 경쟁력 강화라는 협소한 관점에서 추진되는 현실은 교육체제 전체의 균형 있는 발전을 어렵게 하고 있다. 따라서 차기 교육부 장관은 초·중등교육과 고등교육 가운데 어느 한 영역에만 전문성을 가진 인사가 아니라, 유아교육부터 초·중등교육, 대학교육과 평생교육에 이르기까지 국가 교육체제 전반을 이해하고 통합적으로 이끌 수 있는 교육전문가여야 한다.</p>
+      <p>우리는 차기 교육부 장관이 다음과 같은 자질과 정책적 비전을 갖추어야 한다고 요구한다.</p>
+      <h2 class="pnc-speaker"><span class="pnc-speaker-name">첫째,</span><span class="pnc-speaker-title">초·중등교육과 대학교육을 아우르는 통합적 교육전문성을 갖추어야 한다.</span></h2>
+      <p>교육부 장관은 학교 현장과 대학의 현실을 동시에 이해해야 한다. 초·중등교육의 공교육 정상화와 교육격차 해소는 물론, 대학의 자율성과 학문적 자유, 고등교육 재정 확충, 지역대학 육성, 연구역량 강화 등 고등교육의 핵심 과제를 함께 다룰 수 있어야 한다. 특히 대학은 진리 탐구와 학문 발전, 비판적 지성의 형성, 민주주의의 발전에 기여하는 공공적 교육기관이라는 인식이 확고해야 한다.</p>
+      <h2 class="pnc-speaker"><span class="pnc-speaker-name">둘째,</span><span class="pnc-speaker-title">대학의 공공성과 자율성, 학문적 자유를 강화할 수 있어야 한다.</span></h2>
+      <p>대학의 위기를 시장경쟁과 구조조정만으로 해결하려는 정책은 대학의 공공적 기능을 약화시키고 교육·연구의 질적 저하를 초래할 수 있다. 대학 재정의 국가 책임을 강화하고, 지역대학이 지역사회의 교육·연구 거점으로 지속적으로 발전할 수 있도록 안정적인 재정 지원과 제도적 기반을 마련해야 한다. 정부의 과도한 통제와 대학측의 일방적 운영 모두로부터 학문적 자유와 대학 민주주의를 지켜야 한다.</p>
+      <h2 class="pnc-speaker"><span class="pnc-speaker-name">셋째,</span><span class="pnc-speaker-title">비정년트랙교수, 비정규교수, 대학원생, 독립연구자 등 불안정 연구자들 교육노동의 현실을 이해하고 개선할 의지가 있어야 한다.</span></h2>
+      <p>한국 대학의 교육과 연구는 정규직 교수만으로 유지되지 않는다. 고용이 불안정한 수많은 연구자들이 대학의 강의와 연구를 담당하며 고등교육의 중요한 축을 형성하고 있다. 그러나 이들은 불안정한 고용, 낮은 처우, 제한적인 연구 기회, 사회보험과 복지의 사각지대 등 구조적인 차별에 노출되어 있다. 대학의 교육과 연구 역량을 강화하겠다는 정책이 대학에서 실제로 교육과 연구를 수행하는 노동자들의 고용과 노동조건을 외면한다면 그것은 공허한 구호에 불과하다. 대학의 경쟁력은 교육과 연구에 종사하는 사람들의 노동을 존중하는 데서 출발한다.</p>
+      <h2 class="pnc-speaker"><span class="pnc-speaker-name">넷째,</span><span class="pnc-speaker-title">교육의 공공성과 민주주의를 실현할 수 있는 철학과 리더십을 갖추어야 한다.</span></h2>
+      <p>교육은 시장의 논리나 정권의 정치적 이해관계에 종속되어서는 안 된다. 모든 국민에게 평등한 교육기회를 보장하고, 사회경제적 배경에 따른 교육격차를 줄이며, 비판적 사고와 민주적 시민성을 함양하는 것이 교육의 기본적인 책무다. 이를 위해 교육부 장관은 교육정책의 수립과 집행 과정에서 교사와 교수, 학생, 학부모, 교육노동자, 연구자 등 다양한 교육주체들의 참여를 보장해야 한다. 교육 현장의 자율성을 존중하고, 일방적인 행정 지시와 성과주의적 평가체제를 넘어 교육주체들과 함께 정책을 만들어가는 민주적 리더십을 발휘해야 한다.</p>
+      <h2 class="pnc-speaker"><span class="pnc-speaker-name">다섯째,</span><span class="pnc-speaker-title">인구구조 변화와 AI 시대에 대응하는 국가 교육체제의 장기적 비전을 제시해야 한다.</span></h2>
+      <p>학령인구 감소와 지역소멸, 디지털 전환과 AI의 확산은 초·중등교육과 고등교육 모두에 근본적인 변화를 요구하고 있다. 이러한 변화에 대응하기 위해서는 개별 대학의 생존 경쟁이나 단기적인 인력 양성 정책을 넘어 국가 차원의 교육체제 재설계가 필요하다. 특히 지역대학의 위기를 지역사회와 국가의 위기로 인식하고, 수도권과 비수도권 간 교육격차를 해소해야 한다. 대학 간 무분별한 경쟁과 서열화를 완화하고, 대학의 교육·연구 역량을 균형 있게 발전시킬 수 있는 정책을 추진해야 한다. 아울러 평생교육과 성인교육의 확대를 통해 전 생애에 걸친 교육권을 보장해야 한다.</p>
+      <p>우리는 정부가 차기 교육부 장관을 인선하는 과정에서 다음 사항을 분명하게 고려할 것을 촉구한다.</p>
+      <div class="pnc-demands pnc-stats">
+        <div class="pnc-demands-title">차기 교육부 장관 인선에 대한 우리의 요구</div>
+        <dl class="pnc-info">
+          <dt>1</dt><dd>유·초·중등교육과 고등교육을 모두 이해하고 교육체제 전반의 균형 있는 발전을 이끌 수 있는 교육전문가를 임명하라.</dd>
+          <dt>2</dt><dd>대학을 시장경쟁과 산업인력 양성의 도구로 취급하는 관점에서 벗어나 고등교육의 공공성과 대학의 자율성, 학문적 자유를 강화하라.</dd>
+          <dt>3</dt><dd>대학 재정에 대한 국가 책임을 확대하고 지역대학의 위기를 극복할 중장기적인 고등교육 발전계획을 수립하라.</dd>
+          <dt>4</dt><dd>비정규교수, 비정년트랙, 대학원생, 독립연구자 등 연구자의 고용안정, 처우 개선, 교육·연구권 보장을 고등교육 개혁의 핵심 과제로 설정하라.</dd>
+          <dt>5</dt><dd>교사, 교수, 학생, 학부모, 교육노동자 등 교육주체들의 참여와 소통을 보장하는 민주적 교육정책 체계를 구축하라.</dd>
+          <dt>6</dt><dd>유·초·중등교육과 고등교육을 연계하는 국가 교육개혁의 장기적인 비전과 실행계획을 제시하라.</dd>
+        </dl>
+      </div>
+      <h2 class="pnc-speaker"><span class="pnc-speaker-title">교육의 미래를 책임질 수 있는 교육부 장관을 원한다!</span></h2>
+      <p>우리는 차기 교육부 장관 인선이 정치적 안배나 특정 분야의 이해관계, 단편적인 경력과 명성에 좌우되어서는 안 된다고 강조한다. 중요한 것은 교육에 대한 확고한 철학과 교육체제 전반에 대한 전문성, 교육 현장에 대한 깊은 이해, 그리고 교육의 공공적 가치를 실현할 수 있는 개혁 의지다.</p>
+      <p>우리는 교육부 장관이 교육행정의 관리자가 아니라 교육의 미래를 책임지는 공적 지도자이기를 기대한다. 정부는 교육체제 전체를 조망할 수 있는 전문성과 민주적 리더십을 갖춘 인물을 차기 교육부 장관으로 임명해야 한다.</p>
+      <div class="pnc-pullquote">
+        <p>교육을 아는 사람, 학교와 대학을 함께 이해하는 사람, 교육의 공공성과 민주주의를 실현할 사람을 교육부 장관으로 임명하라!</p>
+      </div>
+      <p class="pnc-resolution-sign">2026년 11월 26일 · 전국교수연구자연대</p>
+    </div>
+
+    <div class="pnc-download">
+      <a class="pnc-download-btn" href="20261125보도자료_전국교수연구자연대_차기_교육부장관_인선.pdf" download="2026_18_보도자료.pdf">
+        <span class="pnc-download-icon">⬇</span>
+        <span>보도자료 다운로드 받기</span>
+      </a>
+    </div>
+
+    <div class="pnc-divider">
+      <span class="pnc-dline"></span>
+      <span></span>
+      <span class="pnc-dline"></span>
+    </div>
+
+    <div class="pnc-footer">
+      <div class="pnc-date">2026년 11월 26일</div>
+      <div class="pnc-org">전국교수연구자연대</div>
+      <div class="pnc-members">(민주평등사회를 위한 전국교수연구자협의회, 전국교수노동조합, 전국국공립대학교수노동조합, 전국대학원생·비정규연구자노동조합, 연구자공제회, 지식공유연구자의집, 한국비정규교수노동조합)</div>
+    </div>
+
+  </div>
+</div>
